@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #a9091f;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+em {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
