@@ -269,16 +269,53 @@ body {
     cursor: pointer;
     transition: transform 0.1s ease;
 }
-.social-icon:hover {
-    transform: scale(1.05); /* Leggero ingrandimento al passaggio */
-}
-.social-icon .bg-fill-hover {
-    opacity: 0;
-    transition: opacity 0.2s;
-}
+
 .social-icon:hover .bg-fill-hover {
     opacity: 1;
 }
+
 .social-icon:hover .bg-fill {
     opacity: 0;
+}
+
+.form-control.form-control:focus {
+    border: 2px solid #a9091f; !important; /* Il rosso della tua navbar */
+    box-shadow: none; !important; /* Un alone rosso semitrasparente */
+    outline: 0; !important; /* Rimuove l'outline standard del browser */
+}
+
+/* Stato normale: la navbar segue il sito */
+#sticky-navbar {
+    display: none;
+    background-color: #a9091f;
+    z-index: 9999;
+    width: 100%;
+    position: relative; /* Resta nel flusso, non copre nulla */
+}
+
+/* Stato "Sticky": attivato da JS */
+.navbar-fixed {
+    display: flex !important; /* Diventa visibile solo ora */
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: entraFluido 0.3s ease;
+}
+
+#navbar-spacer {
+    display: none;
+    height: 80px;
+    width: 100%;
+}
+
+/* Quando la navbar è fissata, mostriamo lo spaziatore per spingere il contenuto */
+.is-scrolled #navbar-spacer {
+    display: block;
+}
+
+/* Se vuoi aggiungere ulteriore spazio (padding) tra la navbar e il contenuto */
+.is-scrolled #navbar-spacer {
+    margin-bottom: 20px; /* Regola questo valore per aumentare il distacco */
 }

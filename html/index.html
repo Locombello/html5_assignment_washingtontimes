@@ -11,7 +11,6 @@
 </head>
 <body>
     <header>
-
         <!-- Top header -->
         <div class="border-bottom py-2 px-3 px-md-5" style="height: 100px; overflow: hidden;">
             <div class="container-fluid h-100 position-relative d-flex align-items-center">
@@ -52,7 +51,7 @@
 
 
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark py-0">
+        <nav id="main-header-navbar" class="navbar navbar-expand-lg navbar-dark py-0">
             <div class="container">
 
                 <div class="collapse navbar-collapse justify-content-center">
@@ -244,6 +243,7 @@
 
             </div>
         </nav>
+        <!-- Fine navbar -->
 
         <!-- Podcast banner -->
         <div id="podcastbanner" class="py-3">
@@ -348,8 +348,37 @@
                 </div>
             </div>
         </div>
-
     </header>
+
+    <nav id="sticky-navbar" class="navbar navbar-expand-lg p-0">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav gap-3 ms-5">
+                    <a class="nav-link dropdown-toggle" href="#">News</a>
+                    <a class="nav-link dropdown-toggle" href="#">Policy</a>
+                    <a class="nav-link dropdown-toggle" href="#">Commentary</a>
+                    <a class="nav-link dropdown-toggle" href="#">Sports</a>
+                    <a class="nav-link dropdown-toggle" href="#">Sponsored</a>
+                    <a class="nav-link dropdown-toggle" href="#">Events</a>
+                    <a class="nav-link dropdown-toggle" href="#">Video/Podcasts</a>
+                    <a class="nav-link dropdown-toggle" href="#">Games</a>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center me-5">
+                <a href="#" class="text-light flex-shrink-0 me-4">
+                    <svg width="35" height="28" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
+                        <path fill="currentColor" d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="nav-link text-white bg-dark px-2 py-2" style="font-family: 'Georgia', serif">Subscribe</a>
+                <a href="#" class="nav-link text-dark bg-white px-2 py-2" style="font-family: 'Georgia', serif">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="navbar-spacer"></div>
 
     <div class="home mt-4">
         <div class="container">
@@ -399,7 +428,7 @@
                 </div>
 
                 <!-- Sezione centrale -->
-                <div class="col-lg-6 mb-4">
+                <div class="col-lg-6 mb-4 border-end border-start">
                     <article class="main-article border-bottom pb-4 mb-4">
                         <h1 class="serif-headline mb-3">
                             <a href="#" class="text-dark text-decoration-none">Trump's executive order to pay all DHS employees buys time for House GOP to pass funding deal</a>
@@ -1489,17 +1518,17 @@
                     <div class="section-banner">COMMENTARY</div>
                     <div class="d-flex flex-column gap-3 mt-3 mb-4">
                         <article class="d-flex gap-3 align-items-start">
-                            <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Daniel Hoffman">
+                            <img src="https://placehold.co/80x120" class="object-fit-cover" alt="Daniel Hoffman">
                             <div>
-                                <strong class="d-block text-dark" style="font-size: 14px;">Daniel N. Hoffman</strong>
-                                <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Congress must pay for additional Iran war funding, and not charge it to the next generation</a>
+                                <strong class="d-block text-dark border-bottom side-article-title" style="font-size: 18px;">Daniel N. Hoffman</strong>
+                                <a href="#" class="text-dark text-decoration-none lh-sm side-article-title fw-bold" style="font-size: 17px">Congress must pay for additional Iran war funding, and not charge it to the next generation</a>
                             </div>
                         </article>
                         <article class="d-flex gap-3 align-items-start">
-                            <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Scott Walker">
+                            <img src="https://placehold.co/80x120" class="object-fit-cover" alt="Scott Walker">
                             <div>
-                                <strong class="d-block text-dark" style="font-size: 14px;">Scott Walker</strong>
-                                <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Easter lessons from Jesus: Faith greater than obedience</a>
+                                <strong class="d-block text-dark border-bottom side-article-title" style="font-size: 18px;">Scott Walker</strong>
+                                <a href="#" class="text-dark text-decoration-none lh-sm side-article-title fw-bold" style="font-size: 17px;">Easter lessons from Jesus: Faith greater than obedience</a>
                             </div>
                         </article>
                         <div class="text-end">
@@ -1538,5 +1567,7 @@
     <section id="breaking-news"></section>
     <main class="grid"></main>
     <footer></footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
