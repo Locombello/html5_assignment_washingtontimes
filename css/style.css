@@ -1,18 +1,240 @@
+@media all and (min-width: 800px) {
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+        margin-top: 0; /* Azzera il margine per evitare che il mouse "cada" e chiuda il menu */
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #podcastbanner .d-flex {
+        flex-wrap: wrap; /* Sotto gli 800px gli elementi vanno uno sotto l'altro */
+        gap: 15px;
+    }
+
+    .podcastitem {
+        flex: 1 1 100%;  /* Prende tutta la larghezza disponibile */
+        max-width: 500px; /* Centra il blocco su mobile */
+    }
+}
+
+/* Mobile: centrato e senza troppi fronzoli */
+@media (max-width: 800px) {
+    .trending-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-main {
+        max-height: 45px; /* Si rimpicciolisce su mobile */
+    }
+    .america-slogan {
+        font-size: 12px;
+    }
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-weight: 400;
+}
+
+#subscribe {
+    font-family: 'Georgia', serif;
+    font-size: 1.1em;
+    background-color: #a9091f;
+    border-color: #a9091f;
+    border-width: medium;
+    border-bottom-width: thin;
+}
+
+#signin {
+    font-family: 'Georgia', serif;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#podcastbanner {
+    background-color: #e8eaed;
+    border-bottom: 1px solid #dde0e4;
+    width: 100%;
+}
+
+/* Container principale */
+#podcastbanner .d-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20%;
+}
+
+#trending-bar {
+    background-color: #fff;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.logo-main {
+    max-height: 50px; /* Altezza su desktop */
+    width: auto;
+    height: auto;
+}
+
+.america-slogan {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Singolo blocco podcast */
+.podcastitem {
+    flex: 1 1 0;    /* Forza i 3 blocchi a dividersi lo spazio equamente */
+    min-width: 0;      /* Permette al flex-item di restringersi oltre il contenuto */
+    max-width: 450px;  /* Larghezza massima per non farli diventare troppo larghi */
+}
+
+/* Gestione del testo all'interno */
+.podcastitem article h2 {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.podcastitem article h2 a {
+    display: block;    /* Forza il titolo su una riga separata */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.podcastitem article h2 span {
+    display: block;    /* Forza il sottotitolo ad andare a capo */
+    font-size: 13px;
+    color: #58697d;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
 .navbar {
     background-color: #a9091f;
 }
 
 .navbar-nav .nav-link {
-    color: #ffffff !important;
-    font-weight: 500;
+    color: #fff;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #ffffff !important;
+.navbar .nav-item .dropdown-menu {
+    border-radius: 0;       /* Rimuove gli angoli smussati (tendina squadrata) */
+    border: none;           /* Rimuove il bordo predefinito di Bootstrap */
+    box-shadow:
+            0 4px 15px -3px rgba(0,0,0,.1),
+            0 4px 6px -4px rgba(0,0,0,.1);
+    width: 180px;
+    padding: .5rem 0 .8rem 0;
 }
 
-em {
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 500;
+/* Permette al testo di andare a capo */
+.navbar .nav-item .dropdown-menu .dropdown-item {
+    text-align: left;
+    word-wrap: break-word; /* Spezza le parole troppo lunghe se necessario */
+    white-space: normal;  /* Rimuove il divieto di andare a capo */
+    padding: 4px 12px;     /* Aggiunge un po' di respiro tra le voci che vanno a capo */
+    color: #333;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.navbar .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #a9091f;
+    color: #fff;
+}
+
+.trending-container {
+    display: flex;
+    flex-wrap: wrap;       /* Permette ai singoli elementi di andare a capo */
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 8px;       /* Spazio orizzontale tra i pezzi */
+    row-gap: 4px;          /* Spazio verticale quando vanno a capo */
+}
+
+.trending-label {
+    font-size: 13px;
+    font-weight: 800;      /* Massimo spessore per la label */
+    color: #000;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.trending-link {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    white-space: nowrap;   /* Impedisce che una singola parola (es. NEW YORK) si spezzi a metà */
+}
+
+.trending-link:hover {
+    text-decoration: underline;
+}
+
+.sep {
+    color: #ccc;
+    font-size: 16px;
+    user-select: none;
+}
+
+/* Stile per i titoli laterali */
+.side-article-title {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+.side-article-title:hover {
+    color: #c00 !important; /* Diventa rosso al passaggio del mouse */
+}
+
+/* Stile per il titolo centrale grande */
+.serif-headline {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 2.1rem;
+    font-weight: bold;
+    line-height: 1.15;
+}
+.serif-headline a:hover {
+    color: #c00 !important;
+}
+
+/* Stile per i metadati (autore, tempo) */
+.article-meta {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color: #666;
+}
+
+/* Stile per la descrizione dell'articolo centrale */
+.article-abstract {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Stile per le barre grigie dei titoli sezioni (MOST POPULAR, COMMENTARY) */
+.section-banner {
+    background: linear-gradient(to right, #9ba7b5, #c8d2da); /* Gradiente simile all'originale */
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    text-transform: uppercase;
 }

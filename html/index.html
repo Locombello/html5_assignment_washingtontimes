@@ -2,123 +2,244 @@
 <html lang="en-US">
 <head>
     <title>Washington Times - Politics, Breaking News, US and World News</title>
-    <meta name="description"
-          content="The Washington Times delivers breaking news and commentary on the issues that affect the future of our nation.">
+    <meta name="description" content="The Washington Times delivers breaking news and commentary on the issues that affect the future of our nation.">
     <meta name="keywords" content="washington times, politics, breaking news, world news, political news, capitol hill">
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div id="wrapper">
-    <div id="header-container">
+<div>
+    <!-- Wrapper -->
+    <div>
         <header>
 
-            <!-- TOP HEADER -->
-            <div class="border-bottom py-3">
-                <div class="container position-relative">
+            <!-- Top header -->
+            <div class="border-bottom py-2 px-3 px-md-5" style="height: 100px; overflow: hidden;">
+                <div class="container-fluid h-100 position-relative d-flex align-items-center">
 
-                    <!-- Logo centrato -->
-                    <div class="text-center">
-                        <a href="#" class="d-flex flex-column align-items-center text-decoration-none text-dark">
-                            <img src="/img/twt-logo.svg" alt="The Washington Times" style="height:60px;">
-                            <em class="small fst-italic text-reset">America's Newspaper</em>
+                    <!-- Logo principale -->
+                    <div class="position-absolute top-50 start-50 translate-middle text-center" style="width: 100%; max-width: 45vw; z-index: 0;">
+                        <a href="#" class="d-inline-flex flex-column align-items-center text-decoration-none text-dark w-100">
+                            <img src="/img/twt-logo.svg" alt="The Washington Times" class="img-fluid logo-main" style="max-height: 45px; object-fit: contain;">
+                            <em class="america-slogan text-truncate w-100" style="font-size: 13px; line-height: 1.2;">America's Newspaper</em>
                         </a>
                     </div>
 
-                    <!-- Menu destra -->
-                    <div class="position-absolute top-50 end-0 translate-middle-y d-flex align-items-center gap-3">
+                    <!-- Bottoni laterali -->
+                    <div class="ms-auto d-flex align-items-center gap-2 gap-md-3 flex-nowrap position-relative z-1 bg-white ps-2">
 
                         <!-- Email -->
-                        <a href="#" class="text-dark">
-                            <svg width="36" height="24" viewBox="0 0 36 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg" color="#ced3d9">
-                                <path fill="currentColor"
-                                      d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
-                                <path fill="currentColor"
-                                      d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
+                        <a href="#" class="text-dark flex-shrink-0">
+                            <svg width="24" height="20" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
+                                <path fill="currentColor" d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
                             </svg>
                         </a>
 
                         <!-- Subscribe -->
-                        <a href="#" class="btn btn-dark btn-sm">
+                        <a href="#" id="subscribe" class="btn btn-dark btn-sm py-1 px-2 text-nowrap flex-shrink-0">
                             Subscribe
                         </a>
 
                         <!-- Sign in -->
-                        <a href="#" class="text-dark text-decoration-none">
+                        <a href="#" id="signin" class="text-dark text-decoration-none font-weight-bold text-nowrap flex-shrink-0">
                             Sign in
                         </a>
 
                     </div>
+
                 </div>
             </div>
 
 
-            <!-- NAVBAR ROSSA -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark py-0">
                 <div class="container">
 
-                    <div class="collapse navbar-collapse justify-content-center" id="menu">
+                    <div class="collapse navbar-collapse justify-content-center">
                         <ul class="navbar-nav gap-4">
 
-                            <li class="nav-item dropdown">
+                            <!-- News -->
+                            <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">News</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" title="Corrections" class="nav_bar_sub">Corrections</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Politics" class="nav_bar_sub">Politics</a></li>
-                                    <li class="dropdown-item"><a href="#" title="National" class="nav_bar_sub">National</a></li>
-                                    <li class="dropdown-item"><a href="#" title="World" class="nav_bar_sub">World</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Security" class="nav_bar_sub">Security</a></li>
-                                    <li class="dropdown-item"><a href="#" title="The Advocates" class="nav_bar_sub">The Advocates</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Seen, Heard &amp; Whispered" class="nav_bar_sub">Seen, Heard &amp; Whispered</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Business &amp; Economy" class="nav_bar_sub">Business &amp; Economy</a></li>
-                                    <li class="dropdown-item"><a href="#" title="D.C. Local" class="nav_bar_sub">D.C. Local</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Media Spotlight" class="nav_bar_sub ">Media Spotlight</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Newsmakers" class="nav_bar_sub">Newsmakers</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Waste, Fraud &amp; Abuse" class="nav_bar_sub">Waste, Fraud &amp; Abuse</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Inside the Ring" class="nav_bar_sub">Inside the Ring</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Higher Ground" class="nav_bar_sub">Higher Ground</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Culture" class="nav_bar_sub">Culture</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Entertainment" class="nav_bar_sub">Entertainment</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Technology" class="nav_bar_sub">Technology</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Obituaries" class="nav_bar_sub">Obituaries</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Just the Headlines" class="nav_bar_sub">Just the Headlines</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Dive Deeper" class="nav_bar_sub">Dive Deeper</a></li>
-                                    <li class="dropdown-item"><a href="#" title="Celebrating The Washington Times" class="nav_bar_sub">Celebrating The Washington Times</a></li>
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Politics</a></li>
+                                    <li><a class="dropdown-item" href="#">National</a></li>
+                                    <li><a class="dropdown-item" href="#">World</a></li>
+                                    <li><a class="dropdown-item" href="#">Security</a></li>
+                                    <li><a class="dropdown-item" href="#">The Advocates</a></li>
+                                    <li><a class="dropdown-item" href="#">Seen, Heard &amp; Whispered</a></li>
+                                    <li><a class="dropdown-item" href="#">Business &amp; Economy</a></li>
+                                    <li><a class="dropdown-item" href="#">D.C. Local</a></li>
+                                    <li><a class="dropdown-item" href="#">Media Spotlight</a></li>
+                                    <li><a class="dropdown-item" href="#">Newsmakers</a></li>
+                                    <li><a class="dropdown-item" href="#">Waste, Fraud &amp; Abuse</a></li>
+                                    <li><a class="dropdown-item" href="#">Inside the Ring</a></li>
+                                    <li><a class="dropdown-item" href="#">Higher Ground</a></li>
+                                    <li><a class="dropdown-item" href="#">Culture</a></li>
+                                    <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                                    <li><a class="dropdown-item" href="#">Technology</a></li>
+                                    <li><a class="dropdown-item" href="#">Obituaries</a></li>
+                                    <li><a class="dropdown-item" href="#">Just the Headlines</a></li>
+                                    <li><a class="dropdown-item" href="#">Dive Deeper</a></li>
+                                    <li><a class="dropdown-item" href="#">Celebrating The Washington Times</a></li>
                                 </ul>
                             </li>
 
+                            <!-- Policy -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Policy</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Threat Status</a></li>
+                                    <li><a class="dropdown-item" href="#">Energy &amp; Environment</a></li>
+                                    <li><a class="dropdown-item" href="#">Banking &amp; Finance</a></li>
+                                    <li><a class="dropdown-item" href="#">Health Care Reform</a></li>
+                                    <li><a class="dropdown-item" href="#">Second Amendment</a></li>
+                                    <li><a class="dropdown-item" href="#">Immigration Reform</a></li>
+                                    <li><a class="dropdown-item" href="#">Homeland &amp; Cybersecurity</a></li>
+                                    <li><a class="dropdown-item" href="#">Aerospace &amp; Defense</a></li>
+                                    <li><a class="dropdown-item" href="#">Taxes &amp; Budget</a></li>
+                                    <li><a class="dropdown-item" href="#">Law Enforcement &amp; Intelligence</a></li>
+                                    <li><a class="dropdown-item" href="#">Transportation &amp; Infrastructure</a></li>
+                                </ul>
                             </li>
 
+                            <!-- Commentary -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Commentary</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Commentary Main</a></li>
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Editorials</a></li>
+                                    <li><a class="dropdown-item" href="#">Letters</a></li>
+                                    <li><a class="dropdown-item" href="#">Cheryl K. Chumley</a></li>
+                                    <li><a class="dropdown-item" href="#">Kelly Sadler</a></li>
+                                    <li><a class="dropdown-item" href="#">Jed Babbin</a></li>
+                                    <li><a class="dropdown-item" href="#">Tom Basile</a></li>
+                                    <li><a class="dropdown-item" href="#">Tim Constantine</a></li>
+                                    <li><a class="dropdown-item" href="#">Joseph Curl</a></li>
+                                    <li><a class="dropdown-item" href="#">Joseph R. DeTrani</a></li>
+                                    <li><a class="dropdown-item" href="#">Don Feder</a></li>
+                                    <li><a class="dropdown-item" href="#">Billy Hallowell</a></li>
+                                    <li><a class="dropdown-item" href="#">Daniel N. Hoffman</a></li>
+                                    <li><a class="dropdown-item" href="#">David Keene</a></li>
+                                    <li><a class="dropdown-item" href="#">Robert Knight</a></li>
+                                    <li><a class="dropdown-item" href="#">Gene Marks</a></li>
+                                    <li><a class="dropdown-item" href="#">Clifford D. May</a></li>
+                                    <li><a class="dropdown-item" href="#">Michael McKenna</a></li>
+                                    <li><a class="dropdown-item" href="#">Stephen Moore</a></li>
+                                    <li><a class="dropdown-item" href="#">Tim Murtaugh</a></li>
+                                    <li><a class="dropdown-item" href="#">Peter Navarro</a></li>
+                                    <li><a class="dropdown-item" href="#">Everett Piper</a></li>
+                                    <li><a class="dropdown-item" href="#">Cal Thomas</a></li>
+                                    <li><a class="dropdown-item" href="#">Scott Walker</a></li>
+                                    <li><a class="dropdown-item" href="#">Miles Yu</a></li>
+                                    <li><a class="dropdown-item" href="#">Black Voices</a></li>
+                                    <li><a class="dropdown-item" href="#">Books</a></li>
+                                    <li><a class="dropdown-item" href="#">Cartoons</a></li>
+                                    <li><a class="dropdown-item" href="#">To the Republic</a></li>
+                                </ul>
                             </li>
 
+                            <!-- Sports -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Sports</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Sports Main</a></li>
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Washington Commanders</a></li>
+                                    <li><a class="dropdown-item" href="#">Football</a></li>
+                                    <li><a class="dropdown-item" href="#">Baseball</a></li>
+                                    <li><a class="dropdown-item" href="#">Basketball</a></li>
+                                    <li><a class="dropdown-item" href="#">NCAA</a></li>
+                                    <li><a class="dropdown-item" href="#">Thom Loverro</a></li>
+                                    <li><a class="dropdown-item" href="#">Tennis</a></li>
+                                    <li><a class="dropdown-item" href="#">Golf</a></li>
+                                    <li><a class="dropdown-item" href="#">Hockey</a></li>
+                                    <li><a class="dropdown-item" href="#">Soccer</a></li>
+                                    <li><a class="dropdown-item" href="#">Horse Racing</a></li>
+                                    <li><a class="dropdown-item" href="#">NASCAR &amp; Racing</a></li>
+                                    <li><a class="dropdown-item" href="#">District of Sports Podcast</a></li>
+                                    <li><a class="dropdown-item" href="#">Sports Photos</a></li>
+                                </ul>
                             </li>
 
+                            <!-- Sponsored -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Sponsored</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Infrastructure 2026</a></li>
+                                    <li><a class="dropdown-item" href="#">Building the health care Americans deserve</a></li>
+                                    <li><a class="dropdown-item" href="#">Revitalizing Rural America</a></li>
+                                    <li><a class="dropdown-item" href="#">Unbridled Clean Energy</a></li>
+                                    <li><a class="dropdown-item" href="#">Faith at Work</a></li>
+                                    <li><a class="dropdown-item" href="#">Building a healthier America</a></li>
+                                    <li><a class="dropdown-item" href="#">Transportation 2025</a></li>
+                                    <li><a class="dropdown-item" href="#">Investing in American Health</a></li>
+                                    <li><a class="dropdown-item" href="#">Renewing American Energy Dominance</a></li>
+                                    <li><a class="dropdown-item" href="#">Free Iran 2025</a></li>
+                                    <li><a class="dropdown-item" href="#">Invest in Greece 2025</a></li>
+                                </ul>
                             </li>
 
+                            <!-- Events -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Events</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Subscriber Only Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Reagan Forum</a></li>
+                                    <li><a class="dropdown-item" href="#">IDEX 2025</a></li>
+                                    <li><a class="dropdown-item" href="#">Reinventing after Globalization</a></li>
+                                    <li><a class="dropdown-item" href="#">Harm Reduction and Public Health</a></li>
+                                    <li><a class="dropdown-item" href="#">Golden Dome for America</a></li>
+                                    <li><a class="dropdown-item" href="#">Videos</a></li>
+                                    <li><a class="dropdown-item" href="#">Things to do in D.C.</a></li>
+                                </ul>
                             </li>
 
+                            <!-- Video/Podcasts -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Video/Podcasts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">All Videos</a></li>
+                                    <li><a class="dropdown-item" href="#">All Podcasts</a></li>
+                                    <li><a class="dropdown-item" href="#">The Front Page</a></li>
+                                    <li><a class="dropdown-item" href="#">Threat Status</a></li>
+                                    <li><a class="dropdown-item" href="#">Politically Unstable</a></li>
+                                    <li><a class="dropdown-item" href="#">The Sitdown with Alex Swoyer</a></li>
+                                    <li><a class="dropdown-item" href="#">Bold &amp; Blunt</a></li>
+                                    <li><a class="dropdown-item" href="#">The Higher Ground</a></li>
+                                    <li><a class="dropdown-item" href="#">Court Watch</a></li>
+                                    <li><a class="dropdown-item" href="#">Victory Over Communism</a></li>
+                                    <li><a class="dropdown-item" href="#">District of Sports</a></li>
+                                    <li><a class="dropdown-item" href="#">Capitol Hill Show</a></li>
+                                    <li><a class="dropdown-item" href="#">The Unregulated Podcast</a></li>
+                                    <li><a class="dropdown-item" href="#">ForAmerica</a></li>
+                                    <li><a class="dropdown-item" href="#">Washington Times Weekly</a></li>
+                                    <li><a class="dropdown-item" href="#">God, Country &amp; American Story</a></li>
+                                </ul>
                             </li>
 
+                            <!-- Games -->
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" href="#">Games</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Games Main</a></li>
+                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                    <li><a class="dropdown-item" href="#">Play Sudoku</a></li>
+                                    <li><a class="dropdown-item" href="#">Crossword Puzzle</a></li>
+                                    <li><a class="dropdown-item" href="#">Word Search</a></li>
+                                    <li><a class="dropdown-item" href="#">Solitaire</a></li>
+                                    <li><a class="dropdown-item" href="#">Real-Time Crossword Puzzles</a></li>
+                                    <li><a class="dropdown-item" href="#">Quizzes</a></li>
+                                </ul>
                             </li>
 
                         </ul>
@@ -127,7 +248,261 @@
                 </div>
             </nav>
 
+            <!-- Podcast banner -->
+            <div id="podcastbanner" class="py-3">
+                <div class="container">
+
+                    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-lg-5">
+                        <!-- Podcast item 1 -->
+                        <div class="podcastitem">
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://twt-thumbs.washtimes.com/media/specials/0402_FRONT_900_k65x65.png?25e518aeb5fddef9cfade2c3459a6609d7980e02" width="65" height="65" alt="Front Page Podcast">
+                                    </a>
+                                </div>
+                                <h2>
+                                    <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
+                                        Get today’s top stories in under five minutes
+                                    </a>
+                                    <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
+                                        Listen to the Front Page Podcast
+                                    </span>
+                                </h2>
+                            </article>
+                        </div>
+
+                        <!-- Podcast item 2 -->
+                        <div class="podcastitem">
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/65x65/5a0000/5a0000.png" width="65" height="65" alt="Threat Status Podcast">
+                                    </a>
+                                </div>
+                                <h2>
+                                    <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
+                                        LISTEN: Threat Status podcast
+                                    </a>
+                                    <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
+                                        Here's where cyber and physical threats converge
+                                    </span>
+                                </h2>
+                            </article>
+                        </div>
+
+                        <!-- Podcast item 3 -->
+                        <div class="podcastitem">
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/65x65/8899aa/8899aa.png" width="65" height="65" alt="Washington Times ForAmerica">
+                                    </a>
+                                </div>
+                                <h2>
+                                    <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
+                                        WATCH: Washington Times ForAmerica
+                                    </a>
+                                    <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
+                                        The SAVE Act and DHS funding fumbled — again
+                                    </span>
+                                </h2>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending topics -->
+            <div id="trending-bar" class="py-2">
+                <div class="container-fluid">
+                    <div class="trending-container">
+                        <span class="trending-label me-2">TRENDING:</span>
+
+                        <a href="#" class="trending-link">DONALD TRUMP</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">IRAN</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">STRAIT OF HORMUZ</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">ISRAEL</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">NEW YORK</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">DEPARTMENT OF HOMELAND SECURITY</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">SUPREME COURT</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">FINAL FOUR</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">ARTEMIS II</a>
+                        <span class="sep">|</span>
+
+                        <a href="#" class="trending-link">JESUS</a>
+                    </div>
+                </div>
+            </div>
+
         </header>
+
+        <div class="home mt-4">
+            <div class="container">
+                <div class="row gx-4 gx-lg-5">
+
+                    <div class="col-lg-3 mb-4">
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/80x60/333/fff" width="80" height="60" class="object-fit-cover" alt="Trump">
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump imposes 100% tariff on imported drugs, overhauls steel tariffs</a>
+                            </article>
+
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/80x60/555/fff" width="80" height="60" class="object-fit-cover" alt="Commission">
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Federal commission approves Trump's White House ballroom after judge halted construction</a>
+                            </article>
+
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/80x60/777/fff" width="80" height="60" class="object-fit-cover" alt="Cornyn">
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump's silence hurts Cornyn's electability case against Paxton in Texas Senate runoff</a>
+                            </article>
+
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/80x60/999/fff" width="80" height="60" class="object-fit-cover" alt="Missing">
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Christina Marie Plante, missing since 1994, found alive after 32 years</a>
+                            </article>
+
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/80x60/bbb/fff" width="80" height="60" class="object-fit-cover" alt="Shooting">
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Quadruple amputee and pro cornhole player argues self-defense in deadly Maryland shooting</a>
+                            </article>
+                        </div>
+
+                        <div class="section-banner">MOST POPULAR</div>
+                        <div class="d-flex flex-column gap-3 mt-3">
+                            <article>
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Republicans to get crushed in the midterms -- or maybe not?</a>
+                            </article>
+                            <article>
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump fires AG Bondi amid Epstein frustration, failed prosecutions of political foes</a>
+                            </article>
+                            <article>
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Federal commission approves Trump's White House ballroom after</a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <article class="main-article border-bottom pb-4 mb-4">
+                            <h1 class="serif-headline mb-3">
+                                <a href="#" class="text-dark text-decoration-none">Trump's executive order to pay all DHS employees buys time for House GOP to pass funding deal</a>
+                            </h1>
+                            <a href="#">
+                                <img src="https://placehold.co/800x450/1a365d/fff?text=Mike+Johnson" class="img-fluid w-100 mb-2" alt="Mike Johnson">
+                            </a>
+                            <div class="article-meta mb-2">
+                                By <a href="#" class="text-primary text-decoration-none">Lindsey McPherson</a> and <a href="#" class="text-primary text-decoration-none">Mary McCue Bell</a> - The Washington Times - <span class="text-danger">14 minutes ago</span>
+                            </div>
+                            <p class="article-abstract">
+                                President Trump will soon sign an executive order to pay all Department of Homeland Security employees, as a congressional deal to end the shutdown hits roadblocks from House Republicans.
+                            </p>
+                        </article>
+
+                        <div class="d-flex flex-column gap-4">
+                            <article class="d-flex gap-3 align-items-center border-bottom pb-3">
+                                <img src="https://placehold.co/120x80/222/fff" width="120" height="80" class="object-fit-cover" alt="Trump Bondi">
+                                <div>
+                                    <span class="badge bg-dark rounded-0 mb-1" style="font-size:10px;">VIDEO</span>
+                                    <h3 class="h6 fw-bold mb-1"><a href="#" class="text-dark text-decoration-none">Trump fires AG Bondi amid Epstein frustration, failed prosecutions of political foes</a></h3>
+                                    <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Kerry Picket</a> - The Washington Times</div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 align-items-center pb-3">
+                                <img src="https://placehold.co/120x80/444/fff" width="120" height="80" class="object-fit-cover" alt="Iranians">
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1"><a href="#" class="text-dark text-decoration-none">Here's a look at the top Iranians killed in the war</a></h3>
+                                    <div class="article-meta"><span class="text-danger">22 minutes ago</span></div>
+                                    <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Vaughn Cockayne</a> and <a href="#" class="text-primary text-decoration-none">Ben Wolfgang</a> - The Washington Times</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 mb-4">
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <strong style="font-size: 14px;">Follow Us</strong>
+                            <div class="d-flex gap-1 text-secondary">
+                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">f</div>
+                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">X</div>
+                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">in</div>
+                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">yt</div>
+                            </div>
+                        </div>
+
+                        <form class="mb-4 position-relative">
+                            <input type="search" class="form-control rounded-pill pe-4" placeholder="Search">
+                            <span class="position-absolute top-50 end-0 translate-middle-y pe-3 text-muted" style="cursor:pointer;">&#128269;</span>
+                        </form>
+
+                        <div class="text-center mb-4">
+                            <a href="#" class="text-dark fw-bold" style="font-size: 12px; text-decoration: none;">SEE MORE VIDEOS &gt;</a>
+                        </div>
+
+                        <div class="section-banner">COMMENTARY</div>
+                        <div class="d-flex flex-column gap-3 mt-3 mb-4">
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Daniel Hoffman">
+                                <div>
+                                    <strong class="d-block text-dark" style="font-size: 14px;">Daniel N. Hoffman</strong>
+                                    <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Congress must pay for additional Iran war funding, and not charge it to the next generation</a>
+                                </div>
+                            </article>
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Scott Walker">
+                                <div>
+                                    <strong class="d-block text-dark" style="font-size: 14px;">Scott Walker</strong>
+                                    <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Easter lessons from Jesus: Faith greater than obedience</a>
+                                </div>
+                            </article>
+                            <div class="text-end">
+                                <a href="#" class="text-dark fw-bold" style="font-size: 11px; text-decoration: none;">MORE COLUMNISTS &gt;</a>
+                            </div>
+                        </div>
+
+                        <div class="section-banner">RAPID REACTIONS</div>
+                        <div class="d-flex flex-column gap-3 mt-3">
+                            <article class="d-flex gap-3 align-items-start border-bottom pb-2">
+                                <img src="https://placehold.co/80x60/777/fff" width="80" height="60" class="object-fit-cover" alt="Anchor Babies">
+                                <div>
+                                    <span class="badge bg-danger rounded-0 mb-1" style="font-size:10px;">PREMIUM</span>
+                                    <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title d-block mb-1">Anchor babies hit surge status, totaling 9 percent of U.S. births</a>
+                                    <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Cheryl K. Chumley</a></div>
+                                </div>
+                            </article>
+                            <article class="d-flex gap-3 align-items-start">
+                                <img src="https://placehold.co/80x60/444/fff" width="80" height="60" class="object-fit-cover" alt="Democrats">
+                                <div>
+                                    <span class="badge bg-danger rounded-0 mb-1" style="font-size:10px;">PREMIUM</span>
+                                    <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title d-block mb-1">Democrats mull — gasp! — straight, White, Christian...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <section id="breaking-news"></section>
