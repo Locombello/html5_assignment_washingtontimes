@@ -39,7 +39,7 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Georgia', serif; !important;
     color: #333;
     font-weight: 400;
 }
@@ -78,6 +78,19 @@ body {
     font-family: "Arial Narrow", Arial, sans-serif;
 }
 
+.central-subsection {
+    border-bottom: 1px solid #a9091f !important;
+    margin-bottom: 1rem;
+}
+
+.central-title {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #a9091f !important;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
 .logo-main {
     max-height: 50px; /* Altezza su desktop */
     width: auto;
@@ -105,6 +118,7 @@ body {
     font-size: 15px;
     margin: 0;
     line-height: 1.2;
+    font-family: 'Georgia', serif; !important;
 }
 
 .podcastitem article h2 a {
@@ -113,6 +127,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 3px;
+    font-family: 'Georgia', serif; !important;
 }
 
 .podcastitem article h2 span {
@@ -121,6 +136,7 @@ body {
     color: #58697d;
     font-weight: normal;
     line-height: 1.2;
+    font-family: 'Georgia', serif; !important;
 }
 
 .navbar {
@@ -129,6 +145,7 @@ body {
 
 .navbar-nav .nav-link {
     color: #fff;
+    font-family: 'Georgia', serif; !important;
 }
 
 .navbar .nav-item .dropdown-menu {
@@ -150,11 +167,19 @@ body {
     color: #333;
     font-size: 14px;
     line-height: 1.2;
+    font-family: 'Georgia', serif; !important;
 }
 
 .navbar .nav-item .dropdown-menu .dropdown-item:hover {
     background-color: #a9091f;
     color: #fff;
+}
+
+/* Rimuove l'effetto opacità al passaggio del mouse sui link della navbar */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    opacity: 1 !important;
+    color: #ffffff !important;
 }
 
 .trending-container {
@@ -196,28 +221,28 @@ body {
 /* Stile per i titoli laterali */
 .side-article-title {
     font-size: 14px;
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif; !important;
 }
 .side-article-title:hover {
-    color: #c00 !important; /* Diventa rosso al passaggio del mouse */
+    color: #a9091f !important; /* Diventa rosso al passaggio del mouse */
 }
 
 /* Stile per il titolo centrale grande */
 .serif-headline {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Georgia', serif; !important;
     font-size: 2.1rem;
     font-weight: bold;
     line-height: 1.15;
 }
 .serif-headline a:hover {
-    color: #c00 !important;
+    color: #a9091f !important;
 }
 
 /* Stile per i metadati (autore, tempo) */
 .article-meta {
     font-size: 12px;
-    font-family: Arial, sans-serif;
     color: #666;
+    font-family: 'Georgia', serif; !important;
 }
 
 /* Stile per la descrizione dell'articolo centrale */
@@ -237,4 +262,23 @@ body {
     font-size: 14px;
     padding: 6px 12px;
     text-transform: uppercase;
+}
+
+/* CSS per l'effetto hover */
+.social-icon {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+.social-icon:hover {
+    transform: scale(1.05); /* Leggero ingrandimento al passaggio */
+}
+.social-icon .bg-fill-hover {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.social-icon:hover .bg-fill-hover {
+    opacity: 1;
+}
+.social-icon:hover .bg-fill {
+    opacity: 0;
 }

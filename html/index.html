@@ -10,504 +10,1533 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div>
-    <!-- Wrapper -->
-    <div>
-        <header>
+    <header>
 
-            <!-- Top header -->
-            <div class="border-bottom py-2 px-3 px-md-5" style="height: 100px; overflow: hidden;">
-                <div class="container-fluid h-100 position-relative d-flex align-items-center">
+        <!-- Top header -->
+        <div class="border-bottom py-2 px-3 px-md-5" style="height: 100px; overflow: hidden;">
+            <div class="container-fluid h-100 position-relative d-flex align-items-center">
 
-                    <!-- Logo principale -->
-                    <div class="position-absolute top-50 start-50 translate-middle text-center" style="width: 100%; max-width: 45vw; z-index: 0;">
-                        <a href="#" class="d-inline-flex flex-column align-items-center text-decoration-none text-dark w-100">
-                            <img src="/img/twt-logo.svg" alt="The Washington Times" class="img-fluid logo-main" style="max-height: 45px; object-fit: contain;">
-                            <em class="america-slogan text-truncate w-100" style="font-size: 13px; line-height: 1.2;">America's Newspaper</em>
-                        </a>
-                    </div>
+                <!-- Logo principale -->
+                <div class="position-absolute top-50 start-50 translate-middle text-center" style="width: 100%; max-width: 45vw; z-index: 0;">
+                    <a href="#" class="d-inline-flex flex-column align-items-center text-decoration-none text-dark w-100">
+                        <img src="/img/twt-logo.svg" alt="The Washington Times" class="img-fluid logo-main" style="max-height: 45px; object-fit: contain;">
+                        <em class="america-slogan text-truncate w-100" style="font-size: 13px; line-height: 1.2;">America's Newspaper</em>
+                    </a>
+                </div>
 
-                    <!-- Bottoni laterali -->
-                    <div class="ms-auto d-flex align-items-center gap-2 gap-md-3 flex-nowrap position-relative z-1 bg-white ps-2">
+                <!-- Bottoni laterali -->
+                <div class="ms-auto d-flex align-items-center gap-2 gap-md-3 flex-nowrap position-relative z-1 bg-white ps-2">
 
-                        <!-- Email -->
-                        <a href="#" class="text-dark flex-shrink-0">
-                            <svg width="24" height="20" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor" d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
-                                <path fill="currentColor" d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
-                            </svg>
-                        </a>
+                    <!-- Email -->
+                    <a href="#" class="text-dark flex-shrink-0">
+                        <svg width="24" height="20" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
+                            <path fill="currentColor" d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
+                        </svg>
+                    </a>
 
-                        <!-- Subscribe -->
-                        <a href="#" id="subscribe" class="btn btn-dark btn-sm py-1 px-2 text-nowrap flex-shrink-0">
-                            Subscribe
-                        </a>
+                    <!-- Subscribe -->
+                    <a href="#" id="subscribe" class="btn btn-dark btn-sm px-2 py-0 text-nowrap flex-shrink-0">
+                        Subscribe
+                    </a>
 
-                        <!-- Sign in -->
-                        <a href="#" id="signin" class="text-dark text-decoration-none font-weight-bold text-nowrap flex-shrink-0">
-                            Sign in
-                        </a>
-
-                    </div>
+                    <!-- Sign in -->
+                    <a href="#" id="signin" class="text-dark text-decoration-none font-weight-bold text-nowrap flex-shrink-0">
+                        Sign in
+                    </a>
 
                 </div>
+
             </div>
+        </div>
 
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark py-0">
-                <div class="container">
-
-                    <div class="collapse navbar-collapse justify-content-center">
-                        <ul class="navbar-nav gap-4">
-
-                            <!-- News -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">News</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Politics</a></li>
-                                    <li><a class="dropdown-item" href="#">National</a></li>
-                                    <li><a class="dropdown-item" href="#">World</a></li>
-                                    <li><a class="dropdown-item" href="#">Security</a></li>
-                                    <li><a class="dropdown-item" href="#">The Advocates</a></li>
-                                    <li><a class="dropdown-item" href="#">Seen, Heard &amp; Whispered</a></li>
-                                    <li><a class="dropdown-item" href="#">Business &amp; Economy</a></li>
-                                    <li><a class="dropdown-item" href="#">D.C. Local</a></li>
-                                    <li><a class="dropdown-item" href="#">Media Spotlight</a></li>
-                                    <li><a class="dropdown-item" href="#">Newsmakers</a></li>
-                                    <li><a class="dropdown-item" href="#">Waste, Fraud &amp; Abuse</a></li>
-                                    <li><a class="dropdown-item" href="#">Inside the Ring</a></li>
-                                    <li><a class="dropdown-item" href="#">Higher Ground</a></li>
-                                    <li><a class="dropdown-item" href="#">Culture</a></li>
-                                    <li><a class="dropdown-item" href="#">Entertainment</a></li>
-                                    <li><a class="dropdown-item" href="#">Technology</a></li>
-                                    <li><a class="dropdown-item" href="#">Obituaries</a></li>
-                                    <li><a class="dropdown-item" href="#">Just the Headlines</a></li>
-                                    <li><a class="dropdown-item" href="#">Dive Deeper</a></li>
-                                    <li><a class="dropdown-item" href="#">Celebrating The Washington Times</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Policy -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Policy</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Threat Status</a></li>
-                                    <li><a class="dropdown-item" href="#">Energy &amp; Environment</a></li>
-                                    <li><a class="dropdown-item" href="#">Banking &amp; Finance</a></li>
-                                    <li><a class="dropdown-item" href="#">Health Care Reform</a></li>
-                                    <li><a class="dropdown-item" href="#">Second Amendment</a></li>
-                                    <li><a class="dropdown-item" href="#">Immigration Reform</a></li>
-                                    <li><a class="dropdown-item" href="#">Homeland &amp; Cybersecurity</a></li>
-                                    <li><a class="dropdown-item" href="#">Aerospace &amp; Defense</a></li>
-                                    <li><a class="dropdown-item" href="#">Taxes &amp; Budget</a></li>
-                                    <li><a class="dropdown-item" href="#">Law Enforcement &amp; Intelligence</a></li>
-                                    <li><a class="dropdown-item" href="#">Transportation &amp; Infrastructure</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Commentary -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Commentary</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Commentary Main</a></li>
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Editorials</a></li>
-                                    <li><a class="dropdown-item" href="#">Letters</a></li>
-                                    <li><a class="dropdown-item" href="#">Cheryl K. Chumley</a></li>
-                                    <li><a class="dropdown-item" href="#">Kelly Sadler</a></li>
-                                    <li><a class="dropdown-item" href="#">Jed Babbin</a></li>
-                                    <li><a class="dropdown-item" href="#">Tom Basile</a></li>
-                                    <li><a class="dropdown-item" href="#">Tim Constantine</a></li>
-                                    <li><a class="dropdown-item" href="#">Joseph Curl</a></li>
-                                    <li><a class="dropdown-item" href="#">Joseph R. DeTrani</a></li>
-                                    <li><a class="dropdown-item" href="#">Don Feder</a></li>
-                                    <li><a class="dropdown-item" href="#">Billy Hallowell</a></li>
-                                    <li><a class="dropdown-item" href="#">Daniel N. Hoffman</a></li>
-                                    <li><a class="dropdown-item" href="#">David Keene</a></li>
-                                    <li><a class="dropdown-item" href="#">Robert Knight</a></li>
-                                    <li><a class="dropdown-item" href="#">Gene Marks</a></li>
-                                    <li><a class="dropdown-item" href="#">Clifford D. May</a></li>
-                                    <li><a class="dropdown-item" href="#">Michael McKenna</a></li>
-                                    <li><a class="dropdown-item" href="#">Stephen Moore</a></li>
-                                    <li><a class="dropdown-item" href="#">Tim Murtaugh</a></li>
-                                    <li><a class="dropdown-item" href="#">Peter Navarro</a></li>
-                                    <li><a class="dropdown-item" href="#">Everett Piper</a></li>
-                                    <li><a class="dropdown-item" href="#">Cal Thomas</a></li>
-                                    <li><a class="dropdown-item" href="#">Scott Walker</a></li>
-                                    <li><a class="dropdown-item" href="#">Miles Yu</a></li>
-                                    <li><a class="dropdown-item" href="#">Black Voices</a></li>
-                                    <li><a class="dropdown-item" href="#">Books</a></li>
-                                    <li><a class="dropdown-item" href="#">Cartoons</a></li>
-                                    <li><a class="dropdown-item" href="#">To the Republic</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Sports -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Sports</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Sports Main</a></li>
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Washington Commanders</a></li>
-                                    <li><a class="dropdown-item" href="#">Football</a></li>
-                                    <li><a class="dropdown-item" href="#">Baseball</a></li>
-                                    <li><a class="dropdown-item" href="#">Basketball</a></li>
-                                    <li><a class="dropdown-item" href="#">NCAA</a></li>
-                                    <li><a class="dropdown-item" href="#">Thom Loverro</a></li>
-                                    <li><a class="dropdown-item" href="#">Tennis</a></li>
-                                    <li><a class="dropdown-item" href="#">Golf</a></li>
-                                    <li><a class="dropdown-item" href="#">Hockey</a></li>
-                                    <li><a class="dropdown-item" href="#">Soccer</a></li>
-                                    <li><a class="dropdown-item" href="#">Horse Racing</a></li>
-                                    <li><a class="dropdown-item" href="#">NASCAR &amp; Racing</a></li>
-                                    <li><a class="dropdown-item" href="#">District of Sports Podcast</a></li>
-                                    <li><a class="dropdown-item" href="#">Sports Photos</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Sponsored -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Sponsored</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Infrastructure 2026</a></li>
-                                    <li><a class="dropdown-item" href="#">Building the health care Americans deserve</a></li>
-                                    <li><a class="dropdown-item" href="#">Revitalizing Rural America</a></li>
-                                    <li><a class="dropdown-item" href="#">Unbridled Clean Energy</a></li>
-                                    <li><a class="dropdown-item" href="#">Faith at Work</a></li>
-                                    <li><a class="dropdown-item" href="#">Building a healthier America</a></li>
-                                    <li><a class="dropdown-item" href="#">Transportation 2025</a></li>
-                                    <li><a class="dropdown-item" href="#">Investing in American Health</a></li>
-                                    <li><a class="dropdown-item" href="#">Renewing American Energy Dominance</a></li>
-                                    <li><a class="dropdown-item" href="#">Free Iran 2025</a></li>
-                                    <li><a class="dropdown-item" href="#">Invest in Greece 2025</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Events -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Events</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Subscriber Only Events</a></li>
-                                    <li><a class="dropdown-item" href="#">Reagan Forum</a></li>
-                                    <li><a class="dropdown-item" href="#">IDEX 2025</a></li>
-                                    <li><a class="dropdown-item" href="#">Reinventing after Globalization</a></li>
-                                    <li><a class="dropdown-item" href="#">Harm Reduction and Public Health</a></li>
-                                    <li><a class="dropdown-item" href="#">Golden Dome for America</a></li>
-                                    <li><a class="dropdown-item" href="#">Videos</a></li>
-                                    <li><a class="dropdown-item" href="#">Things to do in D.C.</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Video/Podcasts -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Video/Podcasts</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">All Videos</a></li>
-                                    <li><a class="dropdown-item" href="#">All Podcasts</a></li>
-                                    <li><a class="dropdown-item" href="#">The Front Page</a></li>
-                                    <li><a class="dropdown-item" href="#">Threat Status</a></li>
-                                    <li><a class="dropdown-item" href="#">Politically Unstable</a></li>
-                                    <li><a class="dropdown-item" href="#">The Sitdown with Alex Swoyer</a></li>
-                                    <li><a class="dropdown-item" href="#">Bold &amp; Blunt</a></li>
-                                    <li><a class="dropdown-item" href="#">The Higher Ground</a></li>
-                                    <li><a class="dropdown-item" href="#">Court Watch</a></li>
-                                    <li><a class="dropdown-item" href="#">Victory Over Communism</a></li>
-                                    <li><a class="dropdown-item" href="#">District of Sports</a></li>
-                                    <li><a class="dropdown-item" href="#">Capitol Hill Show</a></li>
-                                    <li><a class="dropdown-item" href="#">The Unregulated Podcast</a></li>
-                                    <li><a class="dropdown-item" href="#">ForAmerica</a></li>
-                                    <li><a class="dropdown-item" href="#">Washington Times Weekly</a></li>
-                                    <li><a class="dropdown-item" href="#">God, Country &amp; American Story</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Games -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="#">Games</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Games Main</a></li>
-                                    <li><a class="dropdown-item" href="#">Corrections</a></li>
-                                    <li><a class="dropdown-item" href="#">Play Sudoku</a></li>
-                                    <li><a class="dropdown-item" href="#">Crossword Puzzle</a></li>
-                                    <li><a class="dropdown-item" href="#">Word Search</a></li>
-                                    <li><a class="dropdown-item" href="#">Solitaire</a></li>
-                                    <li><a class="dropdown-item" href="#">Real-Time Crossword Puzzles</a></li>
-                                    <li><a class="dropdown-item" href="#">Quizzes</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                </div>
-            </nav>
-
-            <!-- Podcast banner -->
-            <div id="podcastbanner" class="py-3">
-                <div class="container">
-
-                    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-lg-5">
-                        <!-- Podcast item 1 -->
-                        <div class="podcastitem">
-                            <article class="d-flex align-items-center gap-3">
-                                <div class="flex-shrink-0">
-                                    <a href="#">
-                                        <img src="https://twt-thumbs.washtimes.com/media/specials/0402_FRONT_900_k65x65.png?25e518aeb5fddef9cfade2c3459a6609d7980e02" width="65" height="65" alt="Front Page Podcast">
-                                    </a>
-                                </div>
-                                <h2>
-                                    <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
-                                        Get today’s top stories in under five minutes
-                                    </a>
-                                    <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
-                                        Listen to the Front Page Podcast
-                                    </span>
-                                </h2>
-                            </article>
-                        </div>
-
-                        <!-- Podcast item 2 -->
-                        <div class="podcastitem">
-                            <article class="d-flex align-items-center gap-3">
-                                <div class="flex-shrink-0">
-                                    <a href="#">
-                                        <img src="https://placehold.co/65x65/5a0000/5a0000.png" width="65" height="65" alt="Threat Status Podcast">
-                                    </a>
-                                </div>
-                                <h2>
-                                    <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
-                                        LISTEN: Threat Status podcast
-                                    </a>
-                                    <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
-                                        Here's where cyber and physical threats converge
-                                    </span>
-                                </h2>
-                            </article>
-                        </div>
-
-                        <!-- Podcast item 3 -->
-                        <div class="podcastitem">
-                            <article class="d-flex align-items-center gap-3">
-                                <div class="flex-shrink-0">
-                                    <a href="#">
-                                        <img src="https://placehold.co/65x65/8899aa/8899aa.png" width="65" height="65" alt="Washington Times ForAmerica">
-                                    </a>
-                                </div>
-                                <h2>
-                                    <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
-                                        WATCH: Washington Times ForAmerica
-                                    </a>
-                                    <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
-                                        The SAVE Act and DHS funding fumbled — again
-                                    </span>
-                                </h2>
-                            </article>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trending topics -->
-            <div id="trending-bar" class="py-2">
-                <div class="container-fluid">
-                    <div class="trending-container">
-                        <span class="trending-label me-2">TRENDING:</span>
-
-                        <a href="#" class="trending-link">DONALD TRUMP</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">IRAN</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">STRAIT OF HORMUZ</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">ISRAEL</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">NEW YORK</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">DEPARTMENT OF HOMELAND SECURITY</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">SUPREME COURT</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">FINAL FOUR</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">ARTEMIS II</a>
-                        <span class="sep">|</span>
-
-                        <a href="#" class="trending-link">JESUS</a>
-                    </div>
-                </div>
-            </div>
-
-        </header>
-
-        <div class="home mt-4">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark py-0">
             <div class="container">
-                <div class="row gx-4 gx-lg-5">
 
-                    <div class="col-lg-3 mb-4">
-                        <div class="d-flex flex-column gap-3 mb-4">
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/80x60/333/fff" width="80" height="60" class="object-fit-cover" alt="Trump">
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump imposes 100% tariff on imported drugs, overhauls steel tariffs</a>
-                            </article>
+                <div class="collapse navbar-collapse justify-content-center">
+                    <ul class="navbar-nav gap-4">
 
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/80x60/555/fff" width="80" height="60" class="object-fit-cover" alt="Commission">
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Federal commission approves Trump's White House ballroom after judge halted construction</a>
-                            </article>
+                        <!-- News -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">News</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Politics</a></li>
+                                <li><a class="dropdown-item" href="#">National</a></li>
+                                <li><a class="dropdown-item" href="#">World</a></li>
+                                <li><a class="dropdown-item" href="#">Security</a></li>
+                                <li><a class="dropdown-item" href="#">The Advocates</a></li>
+                                <li><a class="dropdown-item" href="#">Seen, Heard &amp; Whispered</a></li>
+                                <li><a class="dropdown-item" href="#">Business &amp; Economy</a></li>
+                                <li><a class="dropdown-item" href="#">D.C. Local</a></li>
+                                <li><a class="dropdown-item" href="#">Media Spotlight</a></li>
+                                <li><a class="dropdown-item" href="#">Newsmakers</a></li>
+                                <li><a class="dropdown-item" href="#">Waste, Fraud &amp; Abuse</a></li>
+                                <li><a class="dropdown-item" href="#">Inside the Ring</a></li>
+                                <li><a class="dropdown-item" href="#">Higher Ground</a></li>
+                                <li><a class="dropdown-item" href="#">Culture</a></li>
+                                <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                                <li><a class="dropdown-item" href="#">Technology</a></li>
+                                <li><a class="dropdown-item" href="#">Obituaries</a></li>
+                                <li><a class="dropdown-item" href="#">Just the Headlines</a></li>
+                                <li><a class="dropdown-item" href="#">Dive Deeper</a></li>
+                                <li><a class="dropdown-item" href="#">Celebrating The Washington Times</a></li>
+                            </ul>
+                        </li>
 
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/80x60/777/fff" width="80" height="60" class="object-fit-cover" alt="Cornyn">
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump's silence hurts Cornyn's electability case against Paxton in Texas Senate runoff</a>
-                            </article>
+                        <!-- Policy -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Policy</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Threat Status</a></li>
+                                <li><a class="dropdown-item" href="#">Energy &amp; Environment</a></li>
+                                <li><a class="dropdown-item" href="#">Banking &amp; Finance</a></li>
+                                <li><a class="dropdown-item" href="#">Health Care Reform</a></li>
+                                <li><a class="dropdown-item" href="#">Second Amendment</a></li>
+                                <li><a class="dropdown-item" href="#">Immigration Reform</a></li>
+                                <li><a class="dropdown-item" href="#">Homeland &amp; Cybersecurity</a></li>
+                                <li><a class="dropdown-item" href="#">Aerospace &amp; Defense</a></li>
+                                <li><a class="dropdown-item" href="#">Taxes &amp; Budget</a></li>
+                                <li><a class="dropdown-item" href="#">Law Enforcement &amp; Intelligence</a></li>
+                                <li><a class="dropdown-item" href="#">Transportation &amp; Infrastructure</a></li>
+                            </ul>
+                        </li>
 
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/80x60/999/fff" width="80" height="60" class="object-fit-cover" alt="Missing">
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Christina Marie Plante, missing since 1994, found alive after 32 years</a>
-                            </article>
+                        <!-- Commentary -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Commentary</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Commentary Main</a></li>
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Editorials</a></li>
+                                <li><a class="dropdown-item" href="#">Letters</a></li>
+                                <li><a class="dropdown-item" href="#">Cheryl K. Chumley</a></li>
+                                <li><a class="dropdown-item" href="#">Kelly Sadler</a></li>
+                                <li><a class="dropdown-item" href="#">Jed Babbin</a></li>
+                                <li><a class="dropdown-item" href="#">Tom Basile</a></li>
+                                <li><a class="dropdown-item" href="#">Tim Constantine</a></li>
+                                <li><a class="dropdown-item" href="#">Joseph Curl</a></li>
+                                <li><a class="dropdown-item" href="#">Joseph R. DeTrani</a></li>
+                                <li><a class="dropdown-item" href="#">Don Feder</a></li>
+                                <li><a class="dropdown-item" href="#">Billy Hallowell</a></li>
+                                <li><a class="dropdown-item" href="#">Daniel N. Hoffman</a></li>
+                                <li><a class="dropdown-item" href="#">David Keene</a></li>
+                                <li><a class="dropdown-item" href="#">Robert Knight</a></li>
+                                <li><a class="dropdown-item" href="#">Gene Marks</a></li>
+                                <li><a class="dropdown-item" href="#">Clifford D. May</a></li>
+                                <li><a class="dropdown-item" href="#">Michael McKenna</a></li>
+                                <li><a class="dropdown-item" href="#">Stephen Moore</a></li>
+                                <li><a class="dropdown-item" href="#">Tim Murtaugh</a></li>
+                                <li><a class="dropdown-item" href="#">Peter Navarro</a></li>
+                                <li><a class="dropdown-item" href="#">Everett Piper</a></li>
+                                <li><a class="dropdown-item" href="#">Cal Thomas</a></li>
+                                <li><a class="dropdown-item" href="#">Scott Walker</a></li>
+                                <li><a class="dropdown-item" href="#">Miles Yu</a></li>
+                                <li><a class="dropdown-item" href="#">Black Voices</a></li>
+                                <li><a class="dropdown-item" href="#">Books</a></li>
+                                <li><a class="dropdown-item" href="#">Cartoons</a></li>
+                                <li><a class="dropdown-item" href="#">To the Republic</a></li>
+                            </ul>
+                        </li>
 
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/80x60/bbb/fff" width="80" height="60" class="object-fit-cover" alt="Shooting">
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Quadruple amputee and pro cornhole player argues self-defense in deadly Maryland shooting</a>
-                            </article>
-                        </div>
+                        <!-- Sports -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Sports</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sports Main</a></li>
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Washington Commanders</a></li>
+                                <li><a class="dropdown-item" href="#">Football</a></li>
+                                <li><a class="dropdown-item" href="#">Baseball</a></li>
+                                <li><a class="dropdown-item" href="#">Basketball</a></li>
+                                <li><a class="dropdown-item" href="#">NCAA</a></li>
+                                <li><a class="dropdown-item" href="#">Thom Loverro</a></li>
+                                <li><a class="dropdown-item" href="#">Tennis</a></li>
+                                <li><a class="dropdown-item" href="#">Golf</a></li>
+                                <li><a class="dropdown-item" href="#">Hockey</a></li>
+                                <li><a class="dropdown-item" href="#">Soccer</a></li>
+                                <li><a class="dropdown-item" href="#">Horse Racing</a></li>
+                                <li><a class="dropdown-item" href="#">NASCAR &amp; Racing</a></li>
+                                <li><a class="dropdown-item" href="#">District of Sports Podcast</a></li>
+                                <li><a class="dropdown-item" href="#">Sports Photos</a></li>
+                            </ul>
+                        </li>
 
-                        <div class="section-banner">MOST POPULAR</div>
-                        <div class="d-flex flex-column gap-3 mt-3">
-                            <article>
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Republicans to get crushed in the midterms -- or maybe not?</a>
-                            </article>
-                            <article>
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump fires AG Bondi amid Epstein frustration, failed prosecutions of political foes</a>
-                            </article>
-                            <article>
-                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Federal commission approves Trump's White House ballroom after</a>
-                            </article>
-                        </div>
-                    </div>
+                        <!-- Sponsored -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Sponsored</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Infrastructure 2026</a></li>
+                                <li><a class="dropdown-item" href="#">Building the health care Americans deserve</a></li>
+                                <li><a class="dropdown-item" href="#">Revitalizing Rural America</a></li>
+                                <li><a class="dropdown-item" href="#">Unbridled Clean Energy</a></li>
+                                <li><a class="dropdown-item" href="#">Faith at Work</a></li>
+                                <li><a class="dropdown-item" href="#">Building a healthier America</a></li>
+                                <li><a class="dropdown-item" href="#">Transportation 2025</a></li>
+                                <li><a class="dropdown-item" href="#">Investing in American Health</a></li>
+                                <li><a class="dropdown-item" href="#">Renewing American Energy Dominance</a></li>
+                                <li><a class="dropdown-item" href="#">Free Iran 2025</a></li>
+                                <li><a class="dropdown-item" href="#">Invest in Greece 2025</a></li>
+                            </ul>
+                        </li>
 
-                    <div class="col-lg-6 mb-4">
-                        <article class="main-article border-bottom pb-4 mb-4">
-                            <h1 class="serif-headline mb-3">
-                                <a href="#" class="text-dark text-decoration-none">Trump's executive order to pay all DHS employees buys time for House GOP to pass funding deal</a>
-                            </h1>
-                            <a href="#">
-                                <img src="https://placehold.co/800x450/1a365d/fff?text=Mike+Johnson" class="img-fluid w-100 mb-2" alt="Mike Johnson">
-                            </a>
-                            <div class="article-meta mb-2">
-                                By <a href="#" class="text-primary text-decoration-none">Lindsey McPherson</a> and <a href="#" class="text-primary text-decoration-none">Mary McCue Bell</a> - The Washington Times - <span class="text-danger">14 minutes ago</span>
+                        <!-- Events -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Events</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Subscriber Only Events</a></li>
+                                <li><a class="dropdown-item" href="#">Reagan Forum</a></li>
+                                <li><a class="dropdown-item" href="#">IDEX 2025</a></li>
+                                <li><a class="dropdown-item" href="#">Reinventing after Globalization</a></li>
+                                <li><a class="dropdown-item" href="#">Harm Reduction and Public Health</a></li>
+                                <li><a class="dropdown-item" href="#">Golden Dome for America</a></li>
+                                <li><a class="dropdown-item" href="#">Videos</a></li>
+                                <li><a class="dropdown-item" href="#">Things to do in D.C.</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Video/Podcasts -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Video/Podcasts</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">All Videos</a></li>
+                                <li><a class="dropdown-item" href="#">All Podcasts</a></li>
+                                <li><a class="dropdown-item" href="#">The Front Page</a></li>
+                                <li><a class="dropdown-item" href="#">Threat Status</a></li>
+                                <li><a class="dropdown-item" href="#">Politically Unstable</a></li>
+                                <li><a class="dropdown-item" href="#">The Sitdown with Alex Swoyer</a></li>
+                                <li><a class="dropdown-item" href="#">Bold &amp; Blunt</a></li>
+                                <li><a class="dropdown-item" href="#">The Higher Ground</a></li>
+                                <li><a class="dropdown-item" href="#">Court Watch</a></li>
+                                <li><a class="dropdown-item" href="#">Victory Over Communism</a></li>
+                                <li><a class="dropdown-item" href="#">District of Sports</a></li>
+                                <li><a class="dropdown-item" href="#">Capitol Hill Show</a></li>
+                                <li><a class="dropdown-item" href="#">The Unregulated Podcast</a></li>
+                                <li><a class="dropdown-item" href="#">ForAmerica</a></li>
+                                <li><a class="dropdown-item" href="#">Washington Times Weekly</a></li>
+                                <li><a class="dropdown-item" href="#">God, Country &amp; American Story</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Games -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#">Games</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Games Main</a></li>
+                                <li><a class="dropdown-item" href="#">Corrections</a></li>
+                                <li><a class="dropdown-item" href="#">Play Sudoku</a></li>
+                                <li><a class="dropdown-item" href="#">Crossword Puzzle</a></li>
+                                <li><a class="dropdown-item" href="#">Word Search</a></li>
+                                <li><a class="dropdown-item" href="#">Solitaire</a></li>
+                                <li><a class="dropdown-item" href="#">Real-Time Crossword Puzzles</a></li>
+                                <li><a class="dropdown-item" href="#">Quizzes</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Podcast banner -->
+        <div id="podcastbanner" class="py-3">
+            <div class="container">
+
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-lg-5">
+                    <!-- Podcast item 1 -->
+                    <div class="podcastitem">
+                        <article class="d-flex align-items-center gap-3">
+                            <div class="flex-shrink-0">
+                                <a href="#">
+                                    <img src="https://placehold.co/65x65/1a365d/1a365d.png" width="65" height="65" alt="Front Page Podcast">
+                                </a>
                             </div>
-                            <p class="article-abstract">
-                                President Trump will soon sign an executive order to pay all Department of Homeland Security employees, as a congressional deal to end the shutdown hits roadblocks from House Republicans.
-                            </p>
+                            <h2>
+                                <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
+                                    Get today’s top stories in under five minutes
+                                </a>
+                                <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
+                                    Listen to the Front Page Podcast
+                                </span>
+                            </h2>
                         </article>
-
-                        <div class="d-flex flex-column gap-4">
-                            <article class="d-flex gap-3 align-items-center border-bottom pb-3">
-                                <img src="https://placehold.co/120x80/222/fff" width="120" height="80" class="object-fit-cover" alt="Trump Bondi">
-                                <div>
-                                    <span class="badge bg-dark rounded-0 mb-1" style="font-size:10px;">VIDEO</span>
-                                    <h3 class="h6 fw-bold mb-1"><a href="#" class="text-dark text-decoration-none">Trump fires AG Bondi amid Epstein frustration, failed prosecutions of political foes</a></h3>
-                                    <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Kerry Picket</a> - The Washington Times</div>
-                                </div>
-                            </article>
-
-                            <article class="d-flex gap-3 align-items-center pb-3">
-                                <img src="https://placehold.co/120x80/444/fff" width="120" height="80" class="object-fit-cover" alt="Iranians">
-                                <div>
-                                    <h3 class="h6 fw-bold mb-1"><a href="#" class="text-dark text-decoration-none">Here's a look at the top Iranians killed in the war</a></h3>
-                                    <div class="article-meta"><span class="text-danger">22 minutes ago</span></div>
-                                    <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Vaughn Cockayne</a> and <a href="#" class="text-primary text-decoration-none">Ben Wolfgang</a> - The Washington Times</div>
-                                </div>
-                            </article>
-                        </div>
                     </div>
 
-                    <div class="col-lg-3 mb-4">
-
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <strong style="font-size: 14px;">Follow Us</strong>
-                            <div class="d-flex gap-1 text-secondary">
-                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">f</div>
-                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">X</div>
-                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">in</div>
-                                <div style="width:24px; height:24px; background:#ccc; text-align:center; font-size:14px; font-weight:bold; color:#fff;">yt</div>
+                    <!-- Podcast item 2 -->
+                    <div class="podcastitem">
+                        <article class="d-flex align-items-center gap-3">
+                            <div class="flex-shrink-0">
+                                <a href="#">
+                                    <img src="https://placehold.co/65x65/5a0000/5a0000.png" width="65" height="65" alt="Threat Status Podcast">
+                                </a>
                             </div>
-                        </div>
+                            <h2>
+                                <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
+                                    LISTEN: Threat Status podcast
+                                </a>
+                                <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
+                                    Here's where cyber and physical threats converge
+                                </span>
+                            </h2>
+                        </article>
+                    </div>
 
-                        <form class="mb-4 position-relative">
-                            <input type="search" class="form-control rounded-pill pe-4" placeholder="Search">
-                            <span class="position-absolute top-50 end-0 translate-middle-y pe-3 text-muted" style="cursor:pointer;">&#128269;</span>
-                        </form>
-
-                        <div class="text-center mb-4">
-                            <a href="#" class="text-dark fw-bold" style="font-size: 12px; text-decoration: none;">SEE MORE VIDEOS &gt;</a>
-                        </div>
-
-                        <div class="section-banner">COMMENTARY</div>
-                        <div class="d-flex flex-column gap-3 mt-3 mb-4">
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Daniel Hoffman">
-                                <div>
-                                    <strong class="d-block text-dark" style="font-size: 14px;">Daniel N. Hoffman</strong>
-                                    <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Congress must pay for additional Iran war funding, and not charge it to the next generation</a>
-                                </div>
-                            </article>
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Scott Walker">
-                                <div>
-                                    <strong class="d-block text-dark" style="font-size: 14px;">Scott Walker</strong>
-                                    <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Easter lessons from Jesus: Faith greater than obedience</a>
-                                </div>
-                            </article>
-                            <div class="text-end">
-                                <a href="#" class="text-dark fw-bold" style="font-size: 11px; text-decoration: none;">MORE COLUMNISTS &gt;</a>
+                    <!-- Podcast item 3 -->
+                    <div class="podcastitem">
+                        <article class="d-flex align-items-center gap-3">
+                            <div class="flex-shrink-0">
+                                <a href="#">
+                                    <img src="https://placehold.co/65x65/8899aa/8899aa.png" width="65" height="65" alt="Washington Times ForAmerica">
+                                </a>
                             </div>
-                        </div>
-
-                        <div class="section-banner">RAPID REACTIONS</div>
-                        <div class="d-flex flex-column gap-3 mt-3">
-                            <article class="d-flex gap-3 align-items-start border-bottom pb-2">
-                                <img src="https://placehold.co/80x60/777/fff" width="80" height="60" class="object-fit-cover" alt="Anchor Babies">
-                                <div>
-                                    <span class="badge bg-danger rounded-0 mb-1" style="font-size:10px;">PREMIUM</span>
-                                    <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title d-block mb-1">Anchor babies hit surge status, totaling 9 percent of U.S. births</a>
-                                    <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Cheryl K. Chumley</a></div>
-                                </div>
-                            </article>
-                            <article class="d-flex gap-3 align-items-start">
-                                <img src="https://placehold.co/80x60/444/fff" width="80" height="60" class="object-fit-cover" alt="Democrats">
-                                <div>
-                                    <span class="badge bg-danger rounded-0 mb-1" style="font-size:10px;">PREMIUM</span>
-                                    <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title d-block mb-1">Democrats mull — gasp! — straight, White, Christian...</a>
-                                </div>
-                            </article>
-                        </div>
-
+                            <h2>
+                                <a href="#" class="d-block text-dark fw-bold text-decoration-none lh-sm mb-1" style="font-size: 15px;">
+                                    WATCH: Washington Times ForAmerica
+                                </a>
+                                <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
+                                    The SAVE Act and DHS funding fumbled — again
+                                </span>
+                            </h2>
+                        </article>
                     </div>
 
                 </div>
             </div>
         </div>
+
+        <!-- Trending topics -->
+        <div id="trending-bar" class="py-2">
+            <div class="container-fluid px-md-5">
+                <div class="trending-container">
+                    <span class="trending-label me-2">TRENDING:</span>
+
+                    <a href="#" class="trending-link">DONALD TRUMP</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">IRAN</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">STRAIT OF HORMUZ</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">ISRAEL</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">NEW YORK</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">DEPARTMENT OF HOMELAND SECURITY</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">SUPREME COURT</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">FINAL FOUR</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">ARTEMIS II</a>
+                    <span class="sep">|</span>
+
+                    <a href="#" class="trending-link">JESUS</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="home mt-4">
+        <div class="container">
+            <div class="row gx-4 gx-lg-5">
+
+                <!-- Sezione laterale sinistra -->
+                <div class="col-lg-3 mb-4">
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/80x60/333/fff" width="80" height="60" class="object-fit-cover" alt="Trump">
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump imposes 100% tariff on imported drugs, overhauls steel tariffs</a>
+                        </article>
+
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/80x60/555/fff" width="80" height="60" class="object-fit-cover" alt="Commission">
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Federal commission approves Trump's White House ballroom after judge halted construction</a>
+                        </article>
+
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/80x60/777/fff" width="80" height="60" class="object-fit-cover" alt="Cornyn">
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump's silence hurts Cornyn's electability case against Paxton in Texas Senate runoff</a>
+                        </article>
+
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/80x60/999/fff" width="80" height="60" class="object-fit-cover" alt="Missing">
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Christina Marie Plante, missing since 1994, found alive after 32 years</a>
+                        </article>
+
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/80x60/bbb/fff" width="80" height="60" class="object-fit-cover" alt="Shooting">
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Quadruple amputee and pro cornhole player argues self-defense in deadly Maryland shooting</a>
+                        </article>
+                    </div>
+
+                    <div class="section-banner">MOST POPULAR</div>
+                    <div class="d-flex flex-column gap-3 mt-3">
+                        <article>
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Republicans to get crushed in the midterms -- or maybe not?</a>
+                        </article>
+                        <article>
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Trump fires AG Bondi amid Epstein frustration, failed prosecutions of political foes</a>
+                        </article>
+                        <article>
+                            <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title">Federal commission approves Trump's White House ballroom after</a>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Sezione centrale -->
+                <div class="col-lg-6 mb-4">
+                    <article class="main-article border-bottom pb-4 mb-4">
+                        <h1 class="serif-headline mb-3">
+                            <a href="#" class="text-dark text-decoration-none">Trump's executive order to pay all DHS employees buys time for House GOP to pass funding deal</a>
+                        </h1>
+                        <a href="#">
+                            <img src="https://placehold.co/800x450/1a365d/fff?text=Mike+Johnson" class="img-fluid w-100 mb-2" alt="Mike Johnson">
+                        </a>
+                        <div class="article-meta mb-2">
+                            By <a href="#" class="text-primary text-decoration-none">Lindsey McPherson</a> and <a href="#" class="text-primary text-decoration-none">Mary McCue Bell</a> - The Washington Times - <span class="text-danger">14 minutes ago</span>
+                        </div>
+                        <p class="article-abstract">
+                            President Trump will soon sign an executive order to pay all Department of Homeland Security employees, as a congressional deal to end the shutdown hits roadblocks from House Republicans.
+                        </p>
+                    </article>
+
+                    <div class="d-flex flex-column gap-4">
+                        <article class="d-flex gap-3 align-items-center border-bottom pb-3">
+                            <img src="https://placehold.co/120x80/222/fff" width="120" height="80" class="object-fit-cover" alt="Trump Bondi">
+                            <div>
+                                <span class="badge bg-dark rounded-0 mb-1" style="font-size:10px;">VIDEO</span>
+                                <h3 class="h6 fw-bold mb-1"><a href="#" class="text-dark text-decoration-none">Trump fires AG Bondi amid Epstein frustration, failed prosecutions of political foes</a></h3>
+                                <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Kerry Picket</a> - The Washington Times</div>
+                            </div>
+                        </article>
+
+                        <article class="d-flex gap-3 align-items-center pb-3">
+                            <img src="https://placehold.co/120x80/444/fff" width="120" height="80" class="object-fit-cover" alt="Iranians">
+                            <div>
+                                <h3 class="h6 fw-bold mb-1"><a href="#" class="text-dark text-decoration-none">Here's a look at the top Iranians killed in the war</a></h3>
+                                <div class="article-meta"><span class="text-danger">22 minutes ago</span></div>
+                                <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Vaughn Cockayne</a> and <a href="#" class="text-primary text-decoration-none">Ben Wolfgang</a> - The Washington Times</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Sottosezione centrale 1 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 2 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 3 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 4 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 5 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 6 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 7 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 8 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 9 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 10 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Sottosezione centrale 11 -->
+                    <div class="news-section mb-5">
+
+                        <div class="central-subsection d-flex justify-content-between align-items-end">
+                            <h3 class="central-title text-uppercase fw-bold m-0">
+                                Politics
+                            </h3>
+                            <a href="#" class="text-uppercase text-dark text-decoration-none" style="font-size: 0.75rem;">
+                                View All <span style="font-size: 1rem; line-height: 0;">⊕</span>
+                            </a>
+                        </div>
+
+                        <div class="articles-list">
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/160x100" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="h5 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Florida jumps into the national redistricting battle with a new gerrymandered map
+                                        </a>
+                                    </h5>
+                                    <div class="article-meta text-muted" style="font-size: 0.9rem;">
+                                        By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Republicans push White House ballroom bill after weekend assassination attempt
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Lindsey McPherson</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Left-wing senators press Democratic leaders to forbid super PAC spending in primaries
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Seth McLaughlin</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex gap-3 mb-3">
+                                <div class="flex-shrink-0">
+                                    <a href="#">
+                                        <img src="https://placehold.co/80x80" alt="Thumbnail">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="h6 fw-bold mb-2">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            Hakeem Jeffries doubles down on call for 'maximum warfare' on Republicans
+                                        </a>
+                                    </h6>
+                                    <div class="article-meta text-muted small">
+                                        By <span class="text-primary">Kerry Picket</span> - <em>The Washington Times</em>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Fine sezione centrale -->
+
+                <!-- Sezione laterale destra -->
+                <div class="col-lg-3 mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-1 pb-2">
+
+                        <strong style="font-size: 18px; font-family: 'Georgia', serif; color: #000;">Follow Us</strong>
+
+                        <div class="d-flex gap-1">
+
+                            <svg class="social-icon" width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="bg-fill-hover" width="512" height="512" rx="15%" fill="#1877f2"></rect>
+                                <rect class="bg-fill" width="512" height="512" rx="15%" fill="#adb5bd"></rect>
+                                <path d="M355.6 330l11.4-74h-71v-48c0-20.2 9.9-40 41.7-40H370v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6V256h-65v74h65v182h80V330h59.6z" fill="#fff"></path>
+                            </svg>
+
+                            <svg class="social-icon" width="26" height="26" viewBox="0 0 512 509.64" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="bg-fill-hover" width="512" height="512" rx="15%" fill="#000000"></rect>
+                                <rect class="bg-fill" width="512" height="512" rx="15%" fill="#adb5bd"></rect>
+                                <path fill="#fff" d="M323.74 148.35h36.12l-78.91 90.2 92.83 122.73h-72.69l-56.93-74.43-65.15 74.43h-36.14l84.4-96.47-89.05-116.46h74.53l51.46 68.04 59.53-68.04zm-12.68 191.31h20.02l-129.2-170.82H180.4l130.66 170.82z"></path>
+                            </svg>
+
+                            <svg class="social-icon" width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient id="grad-insta" cx=".4" cy="1" r="1">
+                                        <stop offset=".1" stop-color="#fd5"></stop>
+                                        <stop offset=".5" stop-color="#ff543e"></stop>
+                                        <stop offset="1" stop-color="#c837ab"></stop>
+                                    </radialGradient>
+                                </defs>
+                                <rect class="bg-fill-hover" width="512" height="512" rx="15%" fill="url(#grad-insta)"></rect>
+                                <rect class="bg-fill" width="512" height="512" rx="15%" fill="#adb5bd"></rect>
+                                <g fill="none" stroke="#fff" stroke-width="30">
+                                    <rect width="308" height="308" x="102" y="102" rx="81"></rect>
+                                    <circle cx="256" cy="256" r="72"></circle>
+                                    <circle cx="347" cy="165" r="6"></circle>
+                                </g>
+                            </svg>
+
+                            <svg class="social-icon" width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="bg-fill-hover" width="512" height="512" rx="15%" fill="#FF0000"></rect>
+                                <rect class="bg-fill" width="512" height="512" rx="15%" fill="#adb5bd"></rect>
+                                <path d="M218 336l114-80-114-80z" fill="#fff"></path>
+                            </svg>
+
+                            <svg class="social-icon" width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="bg-fill-hover" width="512" height="512" rx="15%" fill="#f80"></rect>
+                                <rect class="bg-fill" width="512" height="512" rx="15%" fill="#adb5bd"></rect>
+                                <circle cx="145" cy="367" r="35" fill="#fff"></circle>
+                                <path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162m114 0c0-152-124-276-276-276"></path>
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <form class="mb-4 position-relative">
+                        <div class="position-relative">
+                            <input type="search" class="form-control rounded-pill pe-5" style="font-family: 'Georgia', serif" placeholder="Search">
+                            <svg class="search-icon position-absolute top-50 end-0 translate-middle-y me-3"
+                                 viewBox="0 0 22.192 22.183"
+                                 style="width: 18px; height: 18px; cursor: pointer;"
+                                 id="magnifying_glass"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M21.644 18.758a213.86 213.86 0 01-4.968-4.444 1.434 1.434 0 01-.379-1.949A8.585 8.585 0 008.642.001L8.585 0a8.587 8.587 0 00-.054 17.172l.056.001a8.523 8.523 0 003.8-.888c.03-.018.061-.032.093-.047.164-.076.346-.121.537-.129.021-.002.042-.002.062-.002a1.427 1.427 0 011.123.539 117.822 117.822 0 014.623 4.991c.742.777 2.029.699 2.793-.075.765-.777.757-2.115.026-2.804zm-8.55-5.633a6.37 6.37 0 01-4.507 1.858h-.043c-3.525-.021-6.377-2.91-6.354-6.437.022-3.504 2.891-6.356 6.395-6.356h.043c1.707.011 3.31.687 4.51 1.902s1.855 2.826 1.845 4.535a6.374 6.374 0 01-1.889 4.498z"></path>
+                            </svg>
+                        </div>
+                    </form>
+
+                    <div class="text-center mb-4">
+                        <a href="#" class="text-dark fw-bold" style="font-size: 12px; text-decoration: none;">SEE MORE VIDEOS &gt;</a>
+                    </div>
+
+                    <div class="section-banner">COMMENTARY</div>
+                    <div class="d-flex flex-column gap-3 mt-3 mb-4">
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Daniel Hoffman">
+                            <div>
+                                <strong class="d-block text-dark" style="font-size: 14px;">Daniel N. Hoffman</strong>
+                                <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Congress must pay for additional Iran war funding, and not charge it to the next generation</a>
+                            </div>
+                        </article>
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/60x80/888/fff" width="60" height="80" class="object-fit-cover" alt="Scott Walker">
+                            <div>
+                                <strong class="d-block text-dark" style="font-size: 14px;">Scott Walker</strong>
+                                <a href="#" class="text-dark text-decoration-none lh-sm side-article-title">Easter lessons from Jesus: Faith greater than obedience</a>
+                            </div>
+                        </article>
+                        <div class="text-end">
+                            <a href="#" class="text-dark fw-bold" style="font-size: 11px; text-decoration: none;">MORE COLUMNISTS &gt;</a>
+                        </div>
+                    </div>
+
+                    <div class="section-banner">RAPID REACTIONS</div>
+                    <div class="d-flex flex-column gap-3 mt-3">
+                        <article class="d-flex gap-3 align-items-start border-bottom pb-2">
+                            <img src="https://placehold.co/80x60/777/fff" width="80" height="60" class="object-fit-cover" alt="Anchor Babies">
+                            <div>
+                                <span class="badge bg-danger rounded-0 mb-1" style="font-size:10px;">PREMIUM</span>
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title d-block mb-1">Anchor babies hit surge status, totaling 9 percent of U.S. births</a>
+                                <div class="article-meta">By <a href="#" class="text-primary text-decoration-none">Cheryl K. Chumley</a></div>
+                            </div>
+                        </article>
+                        <article class="d-flex gap-3 align-items-start">
+                            <img src="https://placehold.co/80x60/444/fff" width="80" height="60" class="object-fit-cover" alt="Democrats">
+                            <div>
+                                <span class="badge bg-danger rounded-0 mb-1" style="font-size:10px;">PREMIUM</span>
+                                <a href="#" class="text-dark fw-bold text-decoration-none lh-sm side-article-title d-block mb-1">Democrats mull — gasp! — straight, White, Christian...</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+                <!-- Fine sezione laterale destra -->
+            </div>
+            <!-- Fine row div -->
+        </div>
+        <!-- Fine container div -->
     </div>
+    <!-- Fine home div -->
 
     <section id="breaking-news"></section>
     <main class="grid"></main>
     <footer></footer>
-</div>
 </body>
 </html>
