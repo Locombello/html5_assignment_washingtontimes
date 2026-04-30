@@ -78,6 +78,11 @@ body {
     font-family: "Arial Narrow", Arial, sans-serif;
 }
 
+.main-title {
+    font-size: xx-large;
+    font-family: 'Georgia', serif;
+}
+
 .central-subsection {
     border-bottom: 1px solid #a9091f !important;
     margin-bottom: 1rem;
@@ -89,12 +94,6 @@ body {
     color: #a9091f !important;
     letter-spacing: -0.5px;
     text-transform: uppercase;
-}
-
-.logo-main {
-    max-height: 50px; /* Altezza su desktop */
-    width: auto;
-    height: auto;
 }
 
 .america-slogan {
@@ -218,6 +217,16 @@ body {
     user-select: none;
 }
 
+.related-section {
+    font-size: 13px; !important;
+    font-family: 'Georgia', serif; !important;
+}
+
+.central-article-title {
+    font-size: 16px;
+    font-family: 'Georgia', serif; !important;
+}
+
 /* Stile per i titoli laterali */
 .side-article-title {
     font-size: 14px;
@@ -326,6 +335,56 @@ body {
     width: 100%;
 }
 
+/* Titolo Sezione "VIDEO" */
+.section-title-video {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+/* Link "VIEW ALL" */
+.view-all-link {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Etichetta nera "VIDEO" sulle immagini */
+.video-label {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 11px;
+    padding: 3px 8px;
+    letter-spacing: 1px;
+}
+
+/* Titoli delle notizie (Serif) */
+.video-headline {
+    font-family: 'Georgia', serif;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.video-headline a {
+    color: #000;
+    text-decoration: none;
+}
+
+.video-headline a:hover {
+    text-decoration: underline;
+}
+
+.mytimes-headline {
+    font-family: 'Georgia', serif;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
 .footer-header {
     background-image: linear-gradient(90deg, #9ea7b3, #fff);
     text-shadow: 0 0 9px rgba(0, 0, 0, .4);
@@ -344,7 +403,7 @@ body {
     font-family: 'Arial Black', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #000;
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
