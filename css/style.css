@@ -88,6 +88,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.threat-status-subsection {
+    border-bottom: 1px solid #236D97 !important;
+}
+
 .central-title {
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 1.2rem;
@@ -269,7 +273,7 @@ body {
     color: white;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     padding: 6px 12px;
     text-transform: uppercase;
 }
@@ -389,13 +393,13 @@ body {
     background-image: linear-gradient(90deg, #9ea7b3, #fff);
     text-shadow: 0 0 9px rgba(0, 0, 0, .4);
     color: #fff; !important;
-    font-size: 20px;
     height: 47px;
     line-height: 47px;
-    padding-left: 92px;
     position: relative;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
     text-transform: uppercase;
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 /* Stile Titoli di Sezione (Waste, Fraud & Abuse, ecc.) */
@@ -413,14 +417,14 @@ body {
 }
 
 /* Stile Notizia Principale (Grassetto) */
-.main-headline {
+.footer-main-headline {
     font-family: 'Georgia', serif;
     font-weight: 800;
     font-size: 15px;
     line-height: 1.2;
     margin-bottom: 15px;
 }
-.main-headline a {
+.footer-main-headline a {
     text-decoration: none;
     color: #000;
 }
@@ -431,17 +435,102 @@ body {
     padding-top: 10px;
     margin-top: 10px;
 }
-.sub-headline {
+.footer-sub-headline {
     font-family: 'Georgia', serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.3;
     color: #444;
 }
-.sub-headline a {
+.footer-sub-headline a {
     text-decoration: none;
     color: #444;
 }
-.sub-headline a:hover, .main-headline a:hover {
+.footer-sub-headline a:hover, .footer-main-headline a:hover {
     text-decoration: underline;
+}
+
+.sticky-side-section {
+    position: sticky;
+    top: 42px;
+    z-index: 10;
+}
+
+.circle-placeholder {
+    /* Il cerchio è più grande dell'altezza della barra (60px vs 42px) */
+    width: 70px;
+    height: 70px;
+    background-color: #a60f22; /* Colore rosso scuro */
+    border-radius: 50%; /* Lo rende perfettamente rotondo */
+    flex-shrink: 0; /* Impedisce al cerchio di rimpicciolirsi su schermi piccoli */
+    margin-left: 20px; /* Distanza dal bordo sinistro della barra */
+    z-index: 1; /* Assicura che stia visivamente sopra la barra */
+}
+
+.footer-section-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.closing-footer {
+    background-color: #E8EAED;
+}
+
+.closing-footer .closing-footer-title {
+    color: #a60f22; /* Rosso in stile The Washington Times */
+    font-weight: bold;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.closing-footer .closing-footer-title-link:hover {
+    text-decoration: underline;
+}
+
+.closing-footer .footer-links {
+    list-style-type: none; /* Rimuove i pallini della lista */
+    padding: 0;
+    margin: 0;
+}
+
+.closing-footer .footer-links li {
+    margin-bottom: -4px; /* Spazio verticale tra i vari link */
+}
+
+.closing-footer .footer-links a {
+    color: #1a1a1a; /* Grigio molto scuro / quasi nero */
+    text-decoration: none; /* Rimuove la sottolineatura di default */
+    font-family: 'Georgia', serif; /* Font graziato come nell'immagine */
+    font-size: 14px;
+}
+
+.closing-footer .footer-links a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+/* Stile per i link rossi in basso */
+.bottom-red-links .list-inline-item {
+    margin-right: 12px; /* Spazio orizzontale tra i link */
+    margin-bottom: 8px; /* Spazio verticale quando vanno a capo su mobile */
+}
+
+.bottom-red-links a {
+    color: #a60f22; /* Rosso scuro The Washington Times */
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.bottom-red-links a:hover {
+    text-decoration: underline;
+}
+
+/* Stile per il testo del copyright */
+.footer-copyright-text p {
+    color: #1a1a1a;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    line-height: .9rem
 }
