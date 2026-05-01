@@ -57,6 +57,8 @@
     width: 100%;
     /* ...ma non diventare MAI più stretta delle colonne laterali! */
     min-width: var(--larghezza-colonne-laterali);
+    border-left: 1px solid #DEE2E6;
+    border-right: 1px solid #DEE2E6;
 }
 
 /* Layout base (Desktop: 3 colonne) */
@@ -89,6 +91,38 @@
             "centrale sinistra"
             "destra destra";
     }
+
+    .responsive-right-article {
+        width: 100%;
+    }
+
+    .aligned-central-rightside-section {
+        text-align: center;
+    }
+
+    #front-page-podcast {
+        max-height: 300px;
+    }
+
+    main {
+        border-bottom: none;
+    }
+
+    .col-centrale {
+        border-left: 0;
+    }
+
+    /* Facciamo in modo che quando "destra" cade giù al 100% */
+    .col-destra {
+        border-top: 1px solid #DEE2E6;
+        padding-top: 10px;
+        display: block;
+        max-width: 100%;
+        gap: 1.5rem;
+    }
+    .col-destra > * {
+        flex: 1; /* Divide lo spazio a metà tra i blocchi interni */
+    }
 }
 
 
@@ -102,10 +136,138 @@
             "sinistra"
             "destra";
     }
+
+    .col-centrale {
+        border-left: none;
+        border-right: none;
+    }
+
+    .aligned-central-rightside-section {
+        text-align: center;
+    }
+
+    .mobile-aligned-central-section {
+        text-align: center;
+    }
+
+    .mobile-aligned-central-adv {
+        text-align: center;
+    }
+
+    /* Facciamo in modo che quando "destra" cade giù al 100% */
+    .col-sinistra {
+        display: block;
+        max-width: 100%;
+        gap: 1.5rem;
+    }
+    .col-sinistra > * {
+        flex: 1; /* Divide lo spazio a metà tra i blocchi interni */
+    }
+
+    /* Rimettiamo in verticale gli elementi della colonna di destra su mobile */
+    .col-destra {
+        flex-direction: column;
+    }
 }
 
 * {
     box-sizing: border-box;
+}
+
+.mobile-header {
+    border-bottom: #a9091f solid 1px;
+    border-top: #a9091f solid 1px;
+}
+
+.mobile-header .mobile-menu-button {
+    border-right: #a9091f solid 1px;
+}
+
+.mobile-header .mobile-menu-account {
+    border-left: #a9091f solid 1px;
+}
+
+/* --- STILE PER IL PRIMO ARTICOLO IN EVIDENZA SU MOBILE --- */
+
+/* Su telefono (comportamento di default) l'immagine prende tutto lo spazio */
+.featured-mobile-article .article-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Taglia leggermente l'immagine se necessario, per non schiacciarla */
+}
+
+/* Da schermi medi (tablet/PC - 768px) in su, ripristiniamo la larghezza classica */
+@media (min-width: 768px) {
+    .featured-mobile-article .article-img {
+        width: 160px;
+        height: 100px;
+    }
+}
+
+#sideMenu {
+    background-color: #a9091f;
+}
+
+/* --- STILE DEL MENU LATERALE OFFCANVAS --- */
+
+/* Sfondo rosso e larghezza */
+.custom-side-menu {
+    background-color: #B5092B; /* Il rosso dell'immagine */
+    width: 350px !important; /* Leggermente più largo del default */
+}
+
+/* Bottone X nero */
+.custom-side-menu .custom-close-btn {
+    opacity: 1;
+    filter: none; /* Mantiene la X nera su sfondo rosso come nella foto */
+}
+
+/* Contenitore barra di ricerca */
+.custom-side-menu .search-bar-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Icona della lente di ricerca posizionata a destra dentro l'input */
+.custom-side-menu .search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5; /* Assicura che stia sopra l'input */
+    pointer-events: none; /* Impedisce che rubi il click all'input */
+}
+
+/* --- STILE DELLA LISTA ESPANDIBILE (ACCORDION) --- */
+
+/* Resetta lo stile base dell'accordion di Bootstrap */
+.custom-accordion .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Linea divisoria semitrasparente */
+    border-radius: 0 !important;
+}
+
+/* Stile del testo dei bottoni (News, Policy, ecc.) */
+.custom-accordion .accordion-button {
+    background-color: transparent !important; /* Rimuove lo sfondo azzurro al click */
+    color: white !important;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 0;
+    box-shadow: none !important; /* Rimuove il bordo blu di selezione */
+}
+
+/* Coloriamo di bianco la freccetta (chevron) di Bootstrap */
+.custom-accordion .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+/* Padding interno delle sottocategorie */
+.custom-accordion .accordion-body {
+    padding-left: 0;
+    padding-top: 0;
 }
 
 body {
@@ -286,7 +448,7 @@ body {
 }
 
 .sep {
-    color: #ccc;
+    color: #555;
     font-size: 16px;
     user-select: none;
 }

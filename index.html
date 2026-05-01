@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Washington Times - Politics, Breaking News, US and World News</title>
+    <title>Lorem Ipsum Times - Politics, Breaking News, US and World News</title>
     <meta name="description" content="The Washington Times delivers breaking news and commentary on the issues that affect the future of our nation.">
     <meta name="keywords" content="washington times, politics, breaking news, world news, political news, capitol hill">
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://placehold.co/16x16">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://placehold.co/16x16/a60f22/a60f22">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
+    <header class="d-none d-md-block">
         <!-- Top header -->
-        <div class="border-bottom py-2 px-3 px-md-5" style="height: 100px; overflow: hidden;">
+        <div class="border-bottom py-2" style="height: 100px; overflow: hidden;">
             <div class="container-fluid h-100 position-relative d-flex align-items-center">
 
+                <!-- Spaziatura sinistra -->
+                <div class="col"></div>
+
                 <!-- Logo principale -->
-                <div class="position-absolute top-50 start-50 translate-middle text-center" style="width: 100%; max-width: 45vw; z-index: 0;">
+                <div class="col-auto text-center" style="z-index: 0; min-width: 0;">
                     <a href="#" class="d-inline-flex flex-column align-items-center text-decoration-none text-dark w-100">
                         <h1 class="main-title">LOREM IPSUM TIMES</h1>
                         <em class="america-slogan text-truncate w-100" style="font-size: 13px; line-height: 1.2;">Lorem Ipsum</em>
@@ -24,7 +27,7 @@
                 </div>
 
                 <!-- Bottoni laterali -->
-                <div class="ms-auto d-flex align-items-center gap-2 gap-md-3 flex-nowrap position-relative z-1 bg-white ps-2">
+                <div class="col d-flex align-items-center justify-content-end gap-2 gap-md-3 flex-nowrap position-relative z-1 bg-white ps-2">
 
                     <!-- Email -->
                     <a href="#" class="text-dark flex-shrink-0">
@@ -49,9 +52,8 @@
             </div>
         </div>
 
-
         <!-- Navbar -->
-        <nav id="main-header-navbar" class="navbar navbar-expand-lg navbar-dark py-0">
+        <nav id="main-header-navbar" class="navbar navbar-expand navbar-dark py-0">
             <div class="container">
 
                 <div class="collapse navbar-collapse justify-content-center">
@@ -252,7 +254,7 @@
                 <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-lg-5">
                     <!-- Podcast item 1 -->
                     <div class="podcastitem">
-                        <article class="d-flex align-items-center gap-3">
+                        <article class="d-flex align-items-start gap-3">
                             <div class="flex-shrink-0">
                                 <a href="#">
                                     <img src="https://placehold.co/65x65/1a365d/1a365d.png" width="65" height="65" alt="Front Page Podcast">
@@ -263,7 +265,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </a>
                                 <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
-                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Sed do eiusmod
                                 </span>
                             </h2>
                         </article>
@@ -271,7 +273,7 @@
 
                     <!-- Podcast item 2 -->
                     <div class="podcastitem">
-                        <article class="d-flex align-items-center gap-3">
+                        <article class="d-flex align-items-start gap-3">
                             <div class="flex-shrink-0">
                                 <a href="#">
                                     <img src="https://placehold.co/65x65/5a0000/5a0000.png" width="65" height="65" alt="Threat Status Podcast">
@@ -282,7 +284,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </a>
                                 <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
-                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Sed do eiusmod
                                 </span>
                             </h2>
                         </article>
@@ -290,7 +292,7 @@
 
                     <!-- Podcast item 3 -->
                     <div class="podcastitem">
-                        <article class="d-flex align-items-center gap-3">
+                        <article class="d-flex align-items-start gap-3">
                             <div class="flex-shrink-0">
                                 <a href="#">
                                     <img src="https://placehold.co/65x65/8899aa/8899aa.png" width="65" height="65" alt="Washington Times ForAmerica">
@@ -301,7 +303,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </a>
                                 <span class="d-block lh-sm" style="color: #58697d; font-size: 14px;">
-                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Sed do eiusmod
                                 </span>
                             </h2>
                         </article>
@@ -350,12 +352,11 @@
         </div>
 
         <!-- Sticky Navbar -->
-        <nav id="sticky-navbar" class="navbar navbar-expand-lg p-0">
+        <nav id="sticky-navbar" class="navbar navbar-expand p-0 d-none d-md-block">
             <div class="container d-flex align-items-center justify-content-between">
-                <div class="container">
 
                     <div class="collapse navbar-collapse justify-content-center">
-                        <ul class="navbar-nav gap-4">
+                        <ul class="navbar-nav gap-4 flex-nowrap">
 
                             <!-- News -->
                             <li class="nav-item">
@@ -541,34 +542,345 @@
                         </ul>
                     </div>
 
-                </div>
+                    <div class="d-flex me-5">
+                        <button type="button" class="btn rounded-0 text-light flex-shrink-0 me-4" style="height: 40px;">
+                            <svg width="35" height="28" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
+                                <path fill="currentColor" d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
+                            </svg>
+                        </button>
+                        <a href="#" class="nav-link text-white bg-dark px-2 py-2" style="font-family: 'Georgia', serif">Subscribe</a>
+                        <a href="#" class="nav-link text-dark bg-white px-2 py-2" style="font-family: 'Georgia', serif">Sign&nbsp;In</a>
+                    </div>
 
-                <div class="d-flex align-items-center me-5">
-                    <a href="#" class="text-light flex-shrink-0 me-4">
-                        <svg width="35" height="28" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor" d="M0 22.59C0 23.1423 0.447715 23.59 1 23.59H35C35.5523 23.59 36 23.1423 36 22.59V3.39576C36 2.57999 35.0758 2.10745 34.4145 2.58508L18.5855 14.0171C18.236 14.2696 17.764 14.2696 17.4145 14.0171L1.58549 2.58508C0.924162 2.10745 0 2.57999 0 3.39576V9.404V22.59Z"></path>
-                            <path fill="currentColor" d="M4.57681 0C3.80606 0 3.48456 0.985469 4.10701 1.44V1.44L17.4101 11.159C17.7615 11.4157 18.2385 11.4157 18.5899 11.159L31.893 1.44V1.44C32.5155 0.98547 32.194 0 31.4232 0H4.57681Z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="nav-link text-white bg-dark px-2 py-2" style="font-family: 'Georgia', serif">Subscribe</a>
-                    <a href="#" class="nav-link text-dark bg-white px-2 py-2" style="font-family: 'Georgia', serif">Sign&nbsp;In</a>
-                </div>
             </div>
         </nav>
     </header>
 
-    <div id="navbar-spacer"></div>
+    <header class="mobile-header bg-white d-block d-md-none sticky-top">
+        <div class="container-fluid px-0 d-flex justify-content-between">
 
-    <div class="container text-center p-2">
+            <button type="button" class="mobile-menu-button btn rounded-0 d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <div id="headerCenterArea" class="d-flex align-items-center flex-grow-1 justify-content-center px-3">
+                <div id="mobileStandardLogo" class="d-flex">
+                    <a href="#" type="button" class="text-black text-decoration-none pt-2">
+                        <h1 class="main-title">LOREM IPSUM TIMES</h1>
+                    </a>
+                </div>
+
+                <div id="mobileScrolledContent" class="d-none w-100 justify-content-between align-items-center">
+                    <a href="#" class="text-black text-decoration-none">
+                        <span style="font-family: 'Georgia', 'Times New Roman', serif; font-size: 36px; font-weight: 900; letter-spacing: -2px;">W</span>
+                    </a>
+                    <a href="#" class="btn text-white fw-bold py-1 px-3" style="background-color: #A6192E; border-radius: 3px; font-size: 1rem;">Subscribe</a>
+                </div>
+            </div>
+
+
+
+            <button type="button" class="mobile-menu-account btn rounded-0 d-flex align-items-center justify-content-center">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="#222">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </button>
+
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-start custom-side-menu" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
+
+        <div class="offcanvas-header d-flex align-items-center mt-2 px-4">
+            <button type="button" class="btn-close custom-close-btn me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            <div class="position-relative">
+                <input type="search" class="form-control rounded-pill pe-5" style="font-family: 'Georgia', serif" placeholder="Search">
+                <svg class="search-icon position-absolute top-50 end-0 translate-middle-y me-3"
+                     viewBox="0 0 22.192 22.183"
+                     style="width: 18px; height: 18px; cursor: pointer;"
+                     id="magnifying_glass"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M21.644 18.758a213.86 213.86 0 01-4.968-4.444 1.434 1.434 0 01-.379-1.949A8.585 8.585 0 008.642.001L8.585 0a8.587 8.587 0 00-.054 17.172l.056.001a8.523 8.523 0 003.8-.888c.03-.018.061-.032.093-.047.164-.076.346-.121.537-.129.021-.002.042-.002.062-.002a1.427 1.427 0 011.123.539 117.822 117.822 0 014.623 4.991c.742.777 2.029.699 2.793-.075.765-.777.757-2.115.026-2.804zm-8.55-5.633a6.37 6.37 0 01-4.507 1.858h-.043c-3.525-.021-6.377-2.91-6.354-6.437.022-3.504 2.891-6.356 6.395-6.356h.043c1.707.011 3.31.687 4.51 1.902s1.855 2.826 1.845 4.535a6.374 6.374 0 01-1.889 4.498z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="offcanvas-body px-4 mt-4">
+            <div class="accordion custom-accordion" id="sideMenuAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNews">
+                            News
+                        </button>
+                    </h2>
+                    <div id="collapseNews" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePolicy">
+                            Policy
+                        </button>
+                    </h2>
+                    <div id="collapsePolicy" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCommentary">
+                            Commentary
+                        </button>
+                    </h2>
+                    <div id="collapseCommentary" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSports">
+                            Sports
+                        </button>
+                    </h2>
+                    <div id="collapseSports" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSponsored">
+                            Sponsored
+                        </button>
+                    </h2>
+                    <div id="collapseSponsored" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEvents">
+                            Events
+                        </button>
+                    </h2>
+                    <div id="collapseEvents" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVideoPodcast">
+                            Video/Podcast
+                        </button>
+                    </h2>
+                    <div id="collapseVideoPodcast" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGames">
+                            Games
+                        </button>
+                    </h2>
+                    <div id="collapseGames" class="accordion-collapse collapse" data-bs-parent="#sideMenuAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0 ms-3">
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Lorem ipsum</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Dolor sit amet</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consectetur adipiscing</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Elit sed do</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Eiusmod tempor</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Incididunt ut</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Labore et dolore</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Magna aliqua</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut enim ad</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Minim veniam</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Quis nostrud</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Exercitation ullamco</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Laboris nisi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ut aliquip ex</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Ea commodo</a></li>
+                                <li><a href="#" class="text-white text-decoration-none py-1 d-block" style="font-family: 'Georgia', serif">Consequat duis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="navbar-spacer" class="d-none d-md-block"></div>
+
+    <!-- ADV -->
+    <div class="mobile-aligned-central-section container text-center p-2 d-none d-md-block">
         <img src="https://placehold.co/900x220/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
     </div>
 
-    <main class="mt-4">
-        <div class="border-bottom mx-auto px-3" style="max-width: 1250px;">
+    <main class="container-fluid mt-4">
+        <div class="mx-auto px-3" style="max-width: 1250px;">
             <div class="custom-grid-layout">
 
                 <!-- Sezione laterale sinistra -->
                 <div class="col-sinistra mb-4">
+                    <!-- ADV -->
+                    <div class="mobile-aligned-central-adv my-4 d-block d-md-none">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
+                    </div>
+
+                    <!-- ADV -->
+                    <div class="mobile-aligned-central-adv my-4 d-block d-md-none">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
+                    </div>
+
                     <div class="d-flex flex-column gap-3 mb-4">
                         <article class="d-flex gap-3 align-items-start my-1">
                             <img src="https://placehold.co/80x80/EDEDED/EDEDED" class="object-fit-cover" alt="Trump">
@@ -597,8 +909,8 @@
                     </div>
 
                     <!-- ADV -->
-                    <div class="my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="mobile-aligned-central-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
 
                     <div class="mb-5">
@@ -637,8 +949,8 @@
                     </div>
 
                     <!-- ADV -->
-                    <div class="my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="mobile-aligned-central-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
 
                     <div class="mb-3">
@@ -691,22 +1003,22 @@
                         </div>
                     </div>
 
-                    <div class="mb-5">
+                    <div class="mobile-aligned-central-section mb-5">
                         <div class="section-banner">PLAY SUDOKU</div>
                         <div class="d-flex flex-column gap-3 mt-3">
                             <article class="my-2">
-                                <img src="https://placehold.co/288x288/610000/fff?text=Play+Daily\nOnline\nSudoku" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                                <img src="https://placehold.co/288x288/610000/fff?text=Play+Daily\nOnline\nSudoku" class="img-fluid object-fit-cover" alt="Shooting">
                             </article>
 
                             <article class="my-2">
-                                <img src="https://placehold.co/288x288/610000/610000" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                                <img src="https://placehold.co/288x288/610000/610000" class="img-fluid object-fit-cover" alt="Shooting">
                             </article>
                         </div>
                     </div>
 
                     <!-- ADV -->
-                    <div class="my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="mobile-aligned-central-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
 
                     <div class="mb-5">
@@ -743,19 +1055,19 @@
                         <div class="section-banner">EVENTS</div>
                         <div class="d-flex flex-column gap-3 mt-3">
                             <article class="my-1">
-                                <img src="https://placehold.co/288x288/969696/969696" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                                <img src="https://placehold.co/288x288/969696/969696" class="img-fluid object-fit-cover" alt="Shooting">
                             </article>
                         </div>
                     </div>
 
                     <!-- ADV -->
-                    <div class="sticky-side-section my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="mobile-aligned-central-section sticky-side-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
                 </div>
 
                 <!-- Sezione centrale -->
-                <div class="col-centrale mb-4 border-end border-start px-3 px-lg-3">
+                <div class="col-centrale mb-4 px-3 px-lg-3">
                     <!-- Articolo principale -->
                     <article class="main-article border-bottom pb-4 mb-4">
                         <h1 class="main-headline mb-3">
@@ -975,13 +1287,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -991,6 +1305,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1074,13 +1389,15 @@
 
                         <div class="articles-list pt-3 pb-1" style="background-color: #EAF0F3;">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1090,6 +1407,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1168,13 +1486,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1184,6 +1504,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1262,13 +1583,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1278,6 +1601,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1356,13 +1680,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1372,6 +1698,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1450,13 +1777,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1466,6 +1795,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1544,13 +1874,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1560,6 +1892,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1638,13 +1971,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1654,6 +1989,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1732,13 +2068,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1748,6 +2086,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -1826,13 +2165,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -1842,6 +2183,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -2022,13 +2364,15 @@
 
                         <div class="articles-list">
 
-                            <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                                <div class="flex-shrink-0">
+                            <article class="d-flex flex-column flex-md-row gap-3 mb-3 pb-3 border-bottom featured-mobile-article">
+
+                                <div class="flex-shrink-0 order-2 order-md-1">
                                     <a href="#">
-                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail">
+                                        <img src="https://placehold.co/160x100/969696/969696" alt="Thumbnail" class="article-img">
                                     </a>
                                 </div>
-                                <div class="flex-grow-1">
+
+                                <div class="flex-grow-1 order-1 order-md-2 mb-2 mb-md-0">
                                     <h5 class="h5 fw-bold mb-2">
                                         <a href="#" class="central-article-title text-dark text-decoration-none" style="font-size: 19px;">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
@@ -2038,6 +2382,7 @@
                                         By <span class="text-primary">Susan Ferrechio</span> - <em class="fst-normal">The Washington Times</em>
                                     </div>
                                 </div>
+
                             </article>
 
                             <article class="d-flex gap-3 mb-3 pb-3 border-bottom">
@@ -2406,7 +2751,7 @@
                             <p class="fw-bold mb-2" style="font-size: 18px; font-family: 'Georgia', serif; line-height: 1.2em;">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
                             </p>
-                            <img src="https://placehold.co/300x180/1A1A1A/1A1A1A" class="img-fluid" alt="Video Thumbnail">
+                            <img src="https://placehold.co/300x180/1A1A1A/1A1A1A" class="responsive-right-article img-fluid" alt="Video Thumbnail">
                             <div class="text-end mt-2 mb-4">
                                 <a href="#" class="side-article-title d-inline-flex align-items-center text-dark fw-bold" style="font-family: 'Georgia', serif; font-size: 12px; text-decoration: none;">
                                     SEE MORE VIDEOS
@@ -2451,8 +2796,8 @@
                     </div>
 
                     <!-- ADV -->
-                    <div class="my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="aligned-central-rightside-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
 
                     <div class="mb-5">
@@ -2527,20 +2872,20 @@
                     </div>
 
                     <!-- ADV -->
-                    <div class="my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="aligned-central-rightside-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
 
                     <div class="mb-5">
                         <div class="section-banner">LATEST CARTOON</div>
-                        <article class="mt-3">
+                        <article class="aligned-central-rightside-section mt-3">
                             <img src="https://placehold.co/288x212/969696/969696" class="img-fluid object-fit-cover" alt="Shooting">
                         </article>
                     </div>
 
                     <!-- ADV -->
-                    <div class="my-4">
-                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid w-100 object-fit-cover" alt="Shooting">
+                    <div class="aligned-central-rightside-section my-4">
+                        <img src="https://placehold.co/288x500/171C57/fff?text=Advertisement" class="img-fluid object-fit-cover" alt="Shooting">
                     </div>
 
                     <div class="mb-5">
@@ -2563,7 +2908,7 @@
                     <div class="sticky-side-section mb-5">
                         <div class="section-banner">FRONT PAGE PODCAST</div>
                         <article class="d-flex gap-3 align-items-start mt-3">
-                            <img src="https://placehold.co/288x360/EDEDED/EDEDED" class="img-fluid object-fit-cover" alt="Shooting">
+                            <img src="https://placehold.co/288x360/EDEDED/EDEDED" id="front-page-podcast" class="responsive-right-article img-fluid object-fit-cover" alt="Shooting">
                         </article>
                     </div>
 
@@ -2576,9 +2921,9 @@
     </main>
     <!-- Fine main -->
 
-    <footer class="bg-white border-bottom pt-5">
+    <footer class="bg-white border-bottom mx-auto px-3 d-none d-md-block" style="max-width: 1275px;">
         <!-- More News Footer -->
-        <div class="container mt-4 mb-5">
+        <div class="container-fluid mt-4 mb-5">
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="footer-header position-relative d-flex align-items-center my-4">
@@ -2657,9 +3002,6 @@
                         </article>
                     </section>
 
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mt-2">
                     <section class="footer-section">
                         <h3 class="footer-section-title fw-bold"><a href="#" class="text-black text-decoration-none">HIGHER GROUND</a></h3>
                         <article class="lead-story">
@@ -2724,6 +3066,7 @@
                             <h4 class="footer-sub-headline"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h4>
                         </article>
                     </section>
+
                 </div>
 
             </div>
@@ -2731,7 +3074,7 @@
         <!-- Fine More News Footer -->
 
         <!-- Policy Footer -->
-        <div class="container mt-4 mb-5">
+        <div class="container-fluid mt-4 mb-5">
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="footer-header position-relative d-flex align-items-center my-4">
@@ -2780,9 +3123,6 @@
                         </article>
                     </section>
 
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mt-2">
                     <section class="footer-section">
                         <h3 class="footer-section-title fw-bold"><a href="#" class="text-black text-decoration-none">HOMELAND & CYBERSECURITY</a></h3>
                         <article class="lead-story">
@@ -2817,6 +3157,7 @@
                             <h4 class="footer-sub-headline"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</a></h4>
                         </article>
                     </section>
+
                 </div>
 
             </div>
@@ -2824,7 +3165,7 @@
         <!-- Fine Policy Footer -->
     </footer>
 
-    <footer class="closing-footer pt-4">
+    <footer class="closing-footer pt-4 d-none d-md-block">
         <div class="container">
 
             <!-- PRIMA RIGA (4 Colonne) -->
@@ -3030,6 +3371,59 @@
         </div>
     </footer>
 
+    <footer class="closing-footer py-5 d-block d-md-none">
+        <div class="container-fluid px-4">
+
+            <div class="footer-section mb-4">
+                <h5 class="closing-footer-title">NEWSLETTERS</h5>
+                <ul class="list-unstyled footer-links mb-0">
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Dolor sit amet</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section mb-4">
+                <h5 class="closing-footer-title">FIND US ON FACEBOOK</h5>
+                <ul class="list-unstyled footer-links mb-0">
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Dolor sit amet</a></li>
+                    <li><a href="#">Consectetur adipiscing</a></li>
+                    <li><a href="#">Elit sed do</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section mb-4">
+                <h5 class="closing-footer-title">FIND US ON X</h5>
+                <ul class="list-unstyled footer-links mb-0">
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Dolor sit amet</a></li>
+                    <li><a href="#">Consectetur adipiscing</a></li>
+                    <li><a href="#">Elit sed do</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section mb-5">
+                <h5 class="closing-footer-title">FIND US ON YOUTUBE</h5>
+                <ul class="list-unstyled footer-links mb-0">
+                    <li><a href="#">Lorem ipsum</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-copyright-text text-center">
+                <p class="mb-1">All site contents &copy; Copyright 2026 Lorem Ipsum Times, LLC</p>
+                <p class="mb-0">
+                    Lorem ipsum dolor sit amet
+                    <span class="sep">|</span>
+                    Lorem ipsum dolor sit amet
+                    <span class="sep">|</span>
+                    Lorem ipsum
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
