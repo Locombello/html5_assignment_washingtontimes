@@ -20,7 +20,7 @@
     }
 }
 
-/* Mobile: centrato e senza troppi fronzoli */
+/* Mobile centrato */
 @media (max-width: 800px) {
     .trending-container {
         flex-direction: row;
@@ -36,6 +36,76 @@
     .america-slogan {
         font-size: 12px;
     }
+}
+
+/* Variabile per controllare facilmente la larghezza delle tue colonne laterali */
+:root {
+    --larghezza-colonne-laterali: 328px;
+}
+
+.col-sinistra,
+.col-destra {
+    /* flex: 0 0 [dimensione] significa: NON crescere, NON restringerti, resta di questa larghezza */
+    flex: 0 0 var(--larghezza-colonne-laterali);
+    max-width: var(--larghezza-colonne-laterali);
+    width: 100%;
+}
+
+.col-centrale {
+    /* flex: 1 1 0% significa: occupati tutto lo spazio extra, e restringiti se necessario... */
+    flex: 1 1 0;
+    width: 100%;
+    /* ...ma non diventare MAI più stretta delle colonne laterali! */
+    min-width: var(--larghezza-colonne-laterali);
+}
+
+/* Layout base (Desktop: 3 colonne) */
+.custom-grid-layout {
+    display: grid;
+    gap: 1.5rem; /* L'equivalente dello spazio gx-4 di Bootstrap */
+    /* Crea 3 colonne: 300px fissa, 1fr (fluida, si adatta), 300px fissa */
+    grid-template-columns: 300px minmax(328px, 1fr) 300px;
+    /* Mappa visivamente l'ordine */
+    grid-template-areas: "sinistra centrale destra";
+}
+
+/* Assegniamo un "nome in codice" a ogni div per poterli spostare */
+.col-sinistra { grid-area: sinistra; }
+.col-centrale { grid-area: centrale; }
+.col-destra   { grid-area: destra; }
+
+
+/* --- BREAKPOINT 1: Tablet o Finestre Ristrette --- */
+/* Quando lo spazio è inferiore a ~1000px, la centrale non ci sta più. Cambiamo layout! */
+@media (max-width: 1024px) {
+    .custom-grid-layout {
+        /* Ora creiamo 2 colonne: 1 fluida (ex-centrale) e 1 fissa a destra da 300px (ex-sinistra) */
+        grid-template-columns: 1fr 300px;
+
+        /* Ridisegniamo la mappa!
+           Riga 1: ex-centrale a sinistra, ex-sinistra a destra.
+           Riga 2: ex-destra prende tutta la larghezza sotto. */
+        grid-template-areas:
+            "centrale sinistra"
+            "destra destra";
+    }
+}
+
+
+/* --- BREAKPOINT 2: Smartphone --- */
+/* Sotto i 768px, mettiamo tutto su una singola colonna per renderlo leggibile */
+@media (max-width: 767px) {
+    .custom-grid-layout {
+        grid-template-columns: 1fr; /* Una sola colonna che prende tutto lo spazio */
+        grid-template-areas:
+            "centrale"
+            "sinistra"
+            "destra";
+    }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -240,14 +310,23 @@ body {
     color: #a9091f !important; /* Diventa rosso al passaggio del mouse */
 }
 
-/* Stile per il titolo centrale grande */
-.serif-headline {
+/* Stile per i titoli laterali */
+.central-article-title {
+    font-size: 18px;
     font-family: 'Georgia', serif; !important;
-    font-size: 2.1rem;
+}
+.central-article-title:hover {
+    color: #a9091f !important; /* Diventa rosso al passaggio del mouse */
+}
+
+/* Stile per il titolo centrale grande */
+.main-headline {
+    font-family: 'Georgia', serif; !important;
+    font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.15;
 }
-.serif-headline a:hover {
+.main-headline a:hover {
     color: #a9091f !important;
 }
 
@@ -380,6 +459,18 @@ body {
 
 .video-headline a:hover {
     text-decoration: underline;
+}
+
+/* Layout di default (Una colonna, immagine affiancata a sinistra) */
+.video-thumb-responsive {
+    width: 140px; /* Larghezza fissa perfetta per l'immagine laterale */
+}
+
+/* Sincronizziamo il breakpoint con 'xl' di Bootstrap (1200px) */
+@media (min-width: 1200px) {
+    .video-thumb-responsive {
+        width: 100%; /* L'immagine torna grande sopra il testo solo quando la finestra è larghissima (>1200px) */
+    }
 }
 
 .mytimes-headline {
