@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
         // --- 1. LOGICA DESKTOP ---
         // Eseguiamo questo solo se gli elementi desktop esistono nella pagina
         if (main_header_navbar && sticky_navbar) {
-            if (scrollCorrente >= puntoDiAttivazione) {
-                sticky_navbar.classList.add("navbar-fixed", "d-md-block");
+            if (scrollCorrente > puntoDiAttivazione) {
+                sticky_navbar.classList.add("navbar-fixed");
                 sticky_navbar.classList.remove("d-none");
                 if (podcastbanner) podcastbanner.hidden = true;
                 if (trending_bar) trending_bar.hidden = true;
                 body.classList.add("is-scrolled");
             } else {
-                sticky_navbar.classList.remove("navbar-fixed", "d-md-block");
+                sticky_navbar.classList.remove("navbar-fixed");
                 sticky_navbar.classList.add("d-none");
                 if (podcastbanner) podcastbanner.hidden = false;
                 if (trending_bar) trending_bar.hidden = false;
